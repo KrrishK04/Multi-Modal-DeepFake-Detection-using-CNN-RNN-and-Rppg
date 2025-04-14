@@ -1,0 +1,43 @@
+# Virtual Environment
+venv/
+env/
+.env/
+ENV/
+Data
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model checkpoints and large files
+*.pt
+*.pth
+*.h5
+*.npy
+*.pkl
+
+# Images and videos generated during runtime
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.avi
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
