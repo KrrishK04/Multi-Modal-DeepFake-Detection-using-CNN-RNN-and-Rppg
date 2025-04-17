@@ -21,7 +21,25 @@ The system achieves improved accuracy by combining these approaches through an i
 
 
 ## Installation
+Prerequisites
+This project requires a CUDA-capable GPU. The code has been tested with CUDA 11.8.
 
+Install CUDA Toolkit:
+
+Download and install the CUDA Toolkit 11.8
+Make sure to install the appropriate drivers for your GPU
+Verify CUDA installation with:
+bashnvcc --version
+
+
+
+Install cuDNN:
+
+Download cuDNN compatible with CUDA 11.8
+Follow NVIDIA's installation instructions for your operating system
+Verify cuDNN is properly linked with your CUDA installation
+
+Project Setup
 1. Clone the repository:
    ```bash
    git clone https://github.com/KrrishK04/Multi-Modal-DeepFake-Detection-using-CNN-RNN-and-Rppg.git
