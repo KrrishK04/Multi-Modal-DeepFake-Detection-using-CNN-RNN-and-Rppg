@@ -780,19 +780,20 @@ def run_deepfake_detection(
 
 if __name__ == "__main__":
     
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id1_id3_0002.mp4"
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id6_0007.mp4"
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id1_0005.mp4"
-    # VIDEO_PATH=r"C:\Users\KK\Downloads\WhatsApp Video 2025-04-06 at 14.38.53_1dc15000.mp4"
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0002.mp4"
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id2_0007.mp4"
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id3_0000.mp4"
-    VIDEO_PATH = r"C:\Users\KK\Downloads\test.mp4"
-    # VIDEO_PATH=""
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id2_0003.mp4"
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id2_0005.mp4"
-    # VIDEO_PATH = r"C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id1_0003.mp4"
-
+    #real test videos
+    VIDEO_PATH = 'test/real/1'
+    # VIDEO_PATH = 'test/real/2'
+    # VIDEO_PATH = 'test/real/3'
+    # VIDEO_PATH = 'test/real/4'
+    
+    #fake test videos
+    # VIDEO_PATH = 'test/fake/1'
+    # VIDEO_PATH = 'test/fake/2'
+    # VIDEO_PATH = 'test/fake/3'
+    # VIDEO_PATH = 'test/fake/4'
+    
+    #Also You can set the video path to none to use laptop camera to check for deepfake, for that you might need to configure the camera id.
+    #VIDEO_PATH = ''
     MODEL_PATH = "checkpoint.pt"   
     
     RUN_RPPG = True                
