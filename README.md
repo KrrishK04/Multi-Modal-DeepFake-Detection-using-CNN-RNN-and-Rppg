@@ -25,9 +25,7 @@ The system achieves improved accuracy by combining these approaches through an i
 1. Clone the repository:
    ```bash
    git clone https://github.com/KrrishK04/Multi-Modal-DeepFake-Detection-using-CNN-RNN-and-Rppg.git
-   cd multimodal-deepfake-detection
-   cd rPPg
-   
+   cd Multi-Modal-DeepFake-Detection-using-CNN-RNN-and-Rppg/rPPg   
    ```
 
 2. Create and activate a virtual environment:
@@ -63,7 +61,7 @@ python dfd.py --model_path checkpoint.pt
 ```bash
 python dfd.py --video_path path/to/video.mp4 --model_path checkpoint.pt --no_rppg --no_visualization
 ```
-
+The Ouput is displayed in the terminal. The code also saves an image file - 'fusion_results.png' as an output in the rppg folder.
 ## Project Structure
 
 - `dfd.py` - Main script for deepfake detection
@@ -77,6 +75,6 @@ python dfd.py --video_path path/to/video.mp4 --model_path checkpoint.pt --no_rpp
 ## Results
 
 The multi-modal approach achieves improved accuracy compared to single-modality approaches:
-- CNN-RNN Model: ~98% accuracy on the training set
+- CNN-RNN Model: ~98% accuracy on the validation set
 - rPPG Analysis: Effective at identifying physiological inconsistencies in deepfake videos
 - Combined Approach: Enhanced robustness against diverse deepfake generation techniques
