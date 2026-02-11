@@ -1,0 +1,132 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8f9fa" rx="10" ry="10"/>
+  <text x="500" y="40" font-family="Arial" font-size="28" text-anchor="middle" font-weight="bold">Multi-Modal Deepfake Detection Architecture</text>
+
+  <!-- Input Video -->
+  <rect x="50" y="100" width="120" height="80" fill="#AED6F1" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="110" y="145" font-family="Arial" font-size="16" text-anchor="middle">Input Video</text>
+  
+  <!-- Data Preprocessing Box -->
+  <rect x="50" y="220" width="120" height="80" fill="#D4EFDF" stroke="#2ECC71" stroke-width="2" rx="5" ry="5"/>
+  <text x="110" y="260" font-family="Arial" font-size="16" text-anchor="middle">Data</text>
+  <text x="110" y="280" font-family="Arial" font-size="16" text-anchor="middle">Preprocessing</text>
+  
+  <!-- Arrow from Input to Preprocessing -->
+  <path d="M110 180 L110 220" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Face Detection and Alignment Box -->
+  <rect x="50" y="340" width="120" height="80" fill="#D4EFDF" stroke="#2ECC71" stroke-width="2" rx="5" ry="5"/>
+  <text x="110" y="370" font-family="Arial" font-size="14" text-anchor="middle">Face Detection</text>
+  <text x="110" y="390" font-family="Arial" font-size="14" text-anchor="middle">and Alignment</text>
+  
+  <!-- Arrow from Preprocessing to Face Detection -->
+  <path d="M110 300 L110 340" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Spatial Module (CNN) -->
+  <rect x="240" y="220" width="140" height="100" fill="#F5CBA7" stroke="#E67E22" stroke-width="2" rx="5" ry="5"/>
+  <text x="310" y="250" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Spatial Module</text>
+  <text x="310" y="280" font-family="Arial" font-size="14" text-anchor="middle">(ResNeXt-50)</text>
+  <text x="310" y="300" font-family="Arial" font-size="14" text-anchor="middle">CNN</text>
+  
+  <!-- Temporal Module (RNN) -->
+  <rect x="240" y="360" width="140" height="100" fill="#F5CBA7" stroke="#E67E22" stroke-width="2" rx="5" ry="5"/>
+  <text x="310" y="390" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Temporal Module</text>
+  <text x="310" y="420" font-family="Arial" font-size="14" text-anchor="middle">(LSTM)</text>
+  <text x="310" y="440" font-family="Arial" font-size="14" text-anchor="middle">RNN</text>
+  
+  <!-- Arrow from Face Detection to Spatial Module -->
+  <path d="M170 370 L200 370 L200 270 L240 270" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow from Spatial to Temporal Module -->
+  <path d="M310 320 L310 360" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Physiological Signal Analysis (rPPG) -->
+  <rect x="240" y="500" width="140" height="100" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="310" y="530" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Physiological</text>
+  <text x="310" y="550" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Signal Analysis</text>
+  <text x="310" y="580" font-family="Arial" font-size="14" text-anchor="middle">(rPPG)</text>
+  
+  <!-- Arrow from Face Detection to Physiological Module -->
+  <path d="M170 380 L200 380 L200 550 L240 550" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Right Side Processing Blocks -->
+  <!-- Deepfake Classification from CNN-RNN -->
+  <rect x="440" y="280" width="160" height="80" fill="#FADBD8" stroke="#E74C3C" stroke-width="2" rx="5" ry="5"/>
+  <text x="520" y="315" font-family="Arial" font-size="16" text-anchor="middle">Deepfake Classification</text>
+  <text x="520" y="335" font-family="Arial" font-size="14" text-anchor="middle">(CNN-RNN Output)</text>
+  
+  <!-- Heart Rate Extraction -->
+  <rect x="440" y="510" width="160" height="80" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="520" y="545" font-family="Arial" font-size="16" text-anchor="middle">Heart Rate Extraction</text>
+  <text x="520" y="565" font-family="Arial" font-size="14" text-anchor="middle">(rPPG Output)</text>
+  
+  <!-- Arrow from Temporal Module to Deepfake Classification -->
+  <path d="M380 410 L400 410 L400 320 L440 320" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow from Physiological Module to Heart Rate Extraction -->
+  <path d="M380 550 L440 550" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Physiological Credibility Analysis -->
+  <rect x="650" y="510" width="160" height="80" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="730" y="535" font-family="Arial" font-size="14" text-anchor="middle">Physiological</text>
+  <text x="730" y="555" font-family="Arial" font-size="14" text-anchor="middle">Credibility Analysis</text>
+  <text x="730" y="575" font-family="Arial" font-size="12" text-anchor="middle">(HRV, Rhythm, etc.)</text>
+  
+  <!-- Arrow from Heart Rate to Physiological Credibility -->
+  <path d="M600 550 L650 550" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Fusion System -->
+  <rect x="650" y="380" width="160" height="100" fill="#E8DAEF" stroke="#8E44AD" stroke-width="2" rx="5" ry="5"/>
+  <text x="730" y="410" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Fusion System</text>
+  <text x="730" y="435" font-family="Arial" font-size="14" text-anchor="middle">Confidence-weighted</text>
+  <text x="730" y="455" font-family="Arial" font-size="14" text-anchor="middle">Integration</text>
+  
+  <!-- Arrows to Fusion System -->
+  <path d="M600 320 L630 320 L630 400 L650 400" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M730 510 L730 480" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Final Output -->
+  <rect x="860" y="380" width="120" height="100" fill="#FCF3CF" stroke="#F1C40F" stroke-width="2" rx="5" ry="5"/>
+  <text x="920" y="410" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Final Output</text>
+  <text x="920" y="435" font-family="Arial" font-size="14" text-anchor="middle">Real/Fake</text>
+  <text x="920" y="455" font-family="Arial" font-size="14" text-anchor="middle">Classification</text>
+  <text x="920" y="475" font-family="Arial" font-size="14" text-anchor="middle">+ Confidence</text>
+  
+  <!-- Arrow from Fusion to Final Output -->
+  <path d="M810 430 L860 430" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- CNN-RNN Block Details -->
+  <rect x="330" y="180" width="70" height="30" fill="white" stroke="#555" stroke-width="1" rx="2" ry="2"/>
+  <text x="365" y="200" font-family="Arial" font-size="12" text-anchor="middle">Features</text>
+  
+  <!-- rPPG Block Details -->
+  <rect x="320" y="460" width="85" height="30" fill="white" stroke="#555" stroke-width="1" rx="2" ry="2"/>
+  <text x="362" y="480" font-family="Arial" font-size="12" text-anchor="middle">Cardiac Signal</text>
+  
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <rect x="50" y="630" width="20" height="20" fill="#F5CBA7" stroke="#E67E22" stroke-width="2"/>
+  <text x="80" y="645" font-family="Arial" font-size="14" text-anchor="start">CNN-RNN Modules</text>
+  
+  <rect x="250" y="630" width="20" height="20" fill="#D6EAF8" stroke="#3498DB" stroke-width="2"/>
+  <text x="280" y="645" font-family="Arial" font-size="14" text-anchor="start">rPPG Modules</text>
+  
+  <rect x="450" y="630" width="20" height="20" fill="#E8DAEF" stroke="#8E44AD" stroke-width="2"/>
+  <text x="480" y="645" font-family="Arial" font-size="14" text-anchor="start">Fusion System</text>
+  
+  <rect x="650" y="630" width="20" height="20" fill="#FCF3CF" stroke="#F1C40F" stroke-width="2"/>
+  <text x="680" y="645" font-family="Arial" font-size="14" text-anchor="start">Output</text>
+  
+  <rect x="850" y="630" width="20" height="20" fill="#D4EFDF" stroke="#2ECC71" stroke-width="2"/>
+  <text x="880" y="645" font-family="Arial" font-size="14" text-anchor="start">Preprocessing</text>
+
+  <!-- Subtitle -->
+  <text x="500" y="70" font-family="Arial" font-size="16" text-anchor="middle" font-style="italic">Integrating Spatial, Temporal, and Physiological Analysis</text>
+</svg>

@@ -3,13 +3,21 @@ import torch
 from torch.autograd import Variable
 torch.backends.cudnn.benchmark = True
 torch.backends.cudnn.enabled = True
-from unet_models import UNet16, unet11
+from models import UNet16, UNet11
 class FaceSegGPU:
+    def get_face(self, frame):
+        import face_recognition
+        face_locations = face_recognition.face_locations(frame)
+        if face_locations:
+            top, right, bottom, left = face_locations[0]
+            return (left, top, right, bottom)
+        else:
+            return None
     def __init__(self, bs, size=256):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.net = unet11('unet_celeba.pth', pretrained=True).to(self.device)
-
-        # self.net = UNet16(pretrained=True).to(self.device)        
+        self.net = UNet11(pretrained=True).to(self.device)
+        # If you need to load weights: self.net.load_state_dict(torch.load('unet_celeba.pth'))
+        # self.net = UNet16(pretrained=True).to(self.device)
         # self.net.load_state_dict(torch.load('unet16.pth'))
         self.net.eval()
         sample = Variable(torch.rand(bs,3,size,size).to(self.device))

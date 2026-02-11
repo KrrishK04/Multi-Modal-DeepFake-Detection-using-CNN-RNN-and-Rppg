@@ -1,0 +1,187 @@
+<svg viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8f9fa" rx="10" ry="10"/>
+  <text x="500" y="40" font-family="Arial" font-size="28" text-anchor="middle" font-weight="bold">rPPG System Architecture</text>
+  <text x="500" y="70" font-family="Arial" font-size="16" text-anchor="middle" font-style="italic">Remote Photoplethysmography for Heart Rate Monitoring and Deepfake Detection</text>
+
+  <!-- Input Video -->
+  <rect x="50" y="120" width="120" height="80" fill="#AED6F1" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="110" y="165" font-family="Arial" font-size="16" text-anchor="middle">Input Video</text>
+  
+  <!-- Face Detection -->
+  <rect x="240" y="120" width="140" height="80" fill="#D4EFDF" stroke="#2ECC71" stroke-width="2" rx="5" ry="5"/>
+  <text x="310" y="150" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Face Detection</text>
+  <text x="310" y="175" font-family="Arial" font-size="14" text-anchor="middle">(face_recognition)</text>
+  
+  <!-- Arrow from Input to Face Detection -->
+  <path d="M170 160 L240 160" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Skin Segmentation -->
+  <rect x="450" y="120" width="140" height="80" fill="#D4EFDF" stroke="#2ECC71" stroke-width="2" rx="5" ry="5"/>
+  <text x="520" y="150" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Skin Segmentation</text>
+  <text x="520" y="175" font-family="Arial" font-size="14" text-anchor="middle">(LinkNet34)</text>
+  
+  <!-- Arrow from Face Detection to Skin Segmentation -->
+  <path d="M380 160 L450 160" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Region of Interest Selection -->
+  <rect x="660" y="120" width="140" height="80" fill="#D4EFDF" stroke="#2ECC71" stroke-width="2" rx="5" ry="5"/>
+  <text x="730" y="145" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Region of</text>
+  <text x="730" y="165" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Interest (ROI)</text>
+  <text x="730" y="185" font-family="Arial" font-size="14" text-anchor="middle">Selection</text>
+  
+  <!-- Arrow from Skin Segmentation to ROI -->
+  <path d="M590 160 L660 160" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- RGB Signal Extraction -->
+  <rect x="660" y="250" width="140" height="80" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="730" y="275" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">RGB Signal</text>
+  <text x="730" y="295" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Extraction</text>
+  <text x="730" y="315" font-family="Arial" font-size="12" text-anchor="middle">(Spatial Color Averaging)</text>
+  
+  <!-- Arrow from ROI to RGB Signal -->
+  <path d="M730 200 L730 250" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Color Signal Processing -->
+  <rect x="450" y="250" width="140" height="80" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="520" y="275" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Color Signal</text>
+  <text x="520" y="295" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Processing</text>
+  <text x="520" y="315" font-family="Arial" font-size="12" text-anchor="middle">(Temporal Normalization)</text>
+  
+  <!-- Arrow from RGB Signal to Color Signal Processing -->
+  <path d="M660 290 L590 290" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Plane-Orthogonal-to-Skin (POS) -->
+  <rect x="240" y="250" width="140" height="80" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="310" y="275" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">POS Algorithm</text>
+  <text x="310" y="295" font-family="Arial" font-size="12" text-anchor="middle">(Plane-Orthogonal-to-Skin)</text>
+  <text x="310" y="315" font-family="Arial" font-size="12" text-anchor="middle">Signal Projection</text>
+  
+  <!-- Arrow from Color Signal Processing to POS -->
+  <path d="M450 290 L380 290" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Moving Average Filtering -->
+  <rect x="240" y="380" width="140" height="80" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="310" y="410" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Signal Filtering</text>
+  <text x="310" y="430" font-family="Arial" font-size="12" text-anchor="middle">(Moving Average Order 6)</text>
+  
+  <!-- Arrow from POS to Filtering -->
+  <path d="M310 330 L310 380" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- FFT and Power Spectrum Analysis -->
+  <rect x="450" y="380" width="140" height="80" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="520" y="405" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">FFT Analysis</text>
+  <text x="520" y="425" font-family="Arial" font-size="12" text-anchor="middle">(Power Spectrum Density)</text>
+  <text x="520" y="445" font-family="Arial" font-size="12" text-anchor="middle">Frequency Domain</text>
+  
+  <!-- Arrow from Filtering to FFT -->
+  <path d="M380 420 L450 420" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Bandpass Filtering -->
+  <rect x="660" y="380" width="140" height="80" fill="#D6EAF8" stroke="#3498DB" stroke-width="2" rx="5" ry="5"/>
+  <text x="730" y="405" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Bandpass Filtering</text>
+  <text x="730" y="425" font-family="Arial" font-size="12" text-anchor="middle">(0.75Hz - 3Hz)</text>
+  <text x="730" y="445" font-family="Arial" font-size="12" text-anchor="middle">45-180 BPM Range</text>
+  
+  <!-- Arrow from FFT to Bandpass -->
+  <path d="M590 420 L660 420" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Heart Rate Estimation -->
+  <rect x="450" y="510" width="140" height="80" fill="#FCF3CF" stroke="#F1C40F" stroke-width="2" rx="5" ry="5"/>
+  <text x="520" y="535" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Heart Rate</text>
+  <text x="520" y="555" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Estimation</text>
+  <text x="520" y="575" font-family="Arial" font-size="12" text-anchor="middle">(Peak Frequency)</text>
+  
+  <!-- Arrow from Bandpass to Heart Rate -->
+  <path d="M730 460 L730 490 L520 490 L520 510" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Physiological Credibility Analysis -->
+  <rect x="660" y="510" width="140" height="80" fill="#FADBD8" stroke="#E74C3C" stroke-width="2" rx="5" ry="5"/>
+  <text x="730" y="535" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Physiological</text>
+  <text x="730" y="555" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Credibility Analysis</text>
+  <text x="730" y="575" font-family="Arial" font-size="12" text-anchor="middle">(HRV, Rhythm Features)</text>
+  
+  <!-- Arrow from Heart Rate to Physiological Analysis -->
+  <path d="M590 550 L660 550" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Final Output for rPPG -->
+  <rect x="550" y="630" width="160" height="45" fill="#F5CBA7" stroke="#E67E22" stroke-width="2" rx="5" ry="5"/>
+  <text x="630" y="645" font-family="Arial" font-size="16" text-anchor="middle">Physiological Prediction</text>
+  <text x="630" y="665" font-family="Arial" font-size="14" text-anchor="middle">(Real/Fake Classification)</text>
+  
+  <!-- Arrow to Output -->
+  <path d="M730 590 L730 620 L630 620 L630 630" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Process Monitor -->
+  <rect x="240" y="510" width="140" height="80" fill="#E8DAEF" stroke="#8E44AD" stroke-width="2" rx="5" ry="5"/>
+  <text x="310" y="535" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Process</text>
+  <text x="310" y="555" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Monitor</text>
+  <text x="310" y="575" font-family="Arial" font-size="12" text-anchor="middle">(Signal Quality Assessment)</text>
+  
+  <!-- Arrow from Heart Rate to Process Monitor -->
+  <path d="M450 550 L380 550" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow from Process Monitor to Output -->
+  <path d="M310 590 L310 620 L550 620" stroke="#555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  
+  <!-- Key Components Box -->
+  <rect x="810" y="150" width="170" height="220" fill="white" stroke="#555" stroke-width="1" rx="5" ry="5"/>
+  <text x="895" y="175" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Key Components</text>
+  
+  <rect x="825" y="190" width="15" height="15" fill="#D4EFDF" stroke="#2ECC71" stroke-width="2"/>
+  <text x="850" y="202" font-family="Arial" font-size="14" text-anchor="start" dominant-baseline="middle">Preprocessing</text>
+  
+  <rect x="825" y="220" width="15" height="15" fill="#D6EAF8" stroke="#3498DB" stroke-width="2"/>
+  <text x="850" y="232" font-family="Arial" font-size="14" text-anchor="start" dominant-baseline="middle">Signal Processing</text>
+  
+  <rect x="825" y="250" width="15" height="15" fill="#FCF3CF" stroke="#F1C40F" stroke-width="2"/>
+  <text x="850" y="262" font-family="Arial" font-size="14" text-anchor="start" dominant-baseline="middle">Heart Rate Analysis</text>
+  
+  <rect x="825" y="280" width="15" height="15" fill="#FADBD8" stroke="#E74C3C" stroke-width="2"/>
+  <text x="850" y="292" font-family="Arial" font-size="14" text-anchor="start" dominant-baseline="middle">Credibility Analysis</text>
+  
+  <rect x="825" y="310" width="15" height="15" fill="#F5CBA7" stroke="#E67E22" stroke-width="2"/>
+  <text x="850" y="322" font-family="Arial" font-size="14" text-anchor="start" dominant-baseline="middle">Classification</text>
+  
+  <rect x="825" y="340" width="15" height="15" fill="#E8DAEF" stroke="#8E44AD" stroke-width="2"/>
+  <text x="850" y="352" font-family="Arial" font-size="14" text-anchor="start" dominant-baseline="middle">Monitoring</text>
+  
+  <!-- Technical Details Box -->
+  <rect x="810" y="390" width="170" height="200" fill="white" stroke="#555" stroke-width="1" rx="5" ry="5"/>
+  <text x="895" y="415" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Technical Details</text>
+  
+  <text x="820" y="440" font-family="Arial" font-size="12" text-anchor="start">• Signal Size: 270</text>
+  <text x="820" y="465" font-family="Arial" font-size="12" text-anchor="start">• Batch Size: 30</text>
+  <text x="820" y="490" font-family="Arial" font-size="12" text-anchor="start">• Frame Rate: 30 FPS</text>
+  <text x="820" y="515" font-family="Arial" font-size="12" text-anchor="start">• Min Freq: 0.75 Hz</text>
+  <text x="820" y="540" font-family="Arial" font-size="12" text-anchor="start">• Max Freq: 3.0 Hz</text>
+  <text x="820" y="565" font-family="Arial" font-size="12" text-anchor="start">• Filter Order: 6</text>
+  
+  <!-- Physiological Features Analyzed -->
+  <rect x="50" y="470" width="140" height="180" fill="#F4ECF7" stroke="#8E44AD" stroke-width="1" rx="5" ry="5"/>
+  <text x="120" y="495" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Physiological</text>
+  <text x="120" y="515" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Features</text>
+  
+  <text x="65" y="540" font-family="Arial" font-size="12" text-anchor="start">• Heart Rate (HR)</text>
+  <text x="65" y="565" font-family="Arial" font-size="12" text-anchor="start">• HR Variability (HRV)</text>
+  <text x="65" y="590" font-family="Arial" font-size="12" text-anchor="start">• Pulse Rhythm</text>
+  <text x="65" y="615" font-family="Arial" font-size="12" text-anchor="start">• LF/HF Ratio</text>
+  <text x="65" y="640" font-family="Arial" font-size="12" text-anchor="start">• Physiological</text>
+  <text x="75" y="655" font-family="Arial" font-size="12" text-anchor="start">Plausibility</text>
+
+  <!-- Visualizer Component -->
+  <rect x="50" y="250" width="140" height="80" fill="#E8DAEF" stroke="#8E44AD" stroke-width="2" rx="5" ry="5"/>
+  <text x="120" y="275" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">Visualization</text>
+  <text x="120" y="295" font-family="Arial" font-size="14" text-anchor="middle">Dynamic Plot</text>
+  <text x="120" y="315" font-family="Arial" font-size="12" text-anchor="middle">(BVP and Heart Rate)</text>
+  
+  <!-- Dotted line from POS to Visualizer -->
+  <path d="M240 290 L190 290" stroke="#555" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrowhead)"/>
+</svg>

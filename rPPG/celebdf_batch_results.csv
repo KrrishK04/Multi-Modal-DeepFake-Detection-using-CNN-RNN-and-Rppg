@@ -1,0 +1,201 @@
+file,label,final_prediction,final_confidence,cnn_pred,cnn_conf,rppg_pred,rppg_conf,heart_rate,fusion_method,correct
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id11_0008.mp4,REAL,FAKE,50.03,FAKE,50.03,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id0_0006.mp4,REAL,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id17_0002.mp4,REAL,REAL,94.70,REAL,94.70,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id16_0008.mp4,REAL,FAKE,96.44,FAKE,96.44,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id16_0003.mp4,REAL,REAL,94.01,REAL,94.01,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id12_0004.mp4,REAL,REAL,96.91,REAL,96.91,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id11_0006.mp4,REAL,FAKE,79.68,FAKE,79.68,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id8_0001.mp4,REAL,FAKE,81.94,FAKE,81.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id11_0002.mp4,REAL,REAL,85.54,REAL,85.54,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id4_0000.mp4,REAL,FAKE,77.38,FAKE,77.38,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id0_0008.mp4,REAL,FAKE,44.71,FAKE,90.19,REAL,83.02,71.32,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id0_0007.mp4,REAL,REAL,100.00,REAL,98.80,REAL,93.21,67.92,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id11_0003.mp4,REAL,REAL,99.16,REAL,99.16,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id16_0001.mp4,REAL,REAL,80.87,REAL,80.87,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id16_0005.mp4,REAL,REAL,99.60,REAL,99.60,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id7_0001.mp4,REAL,REAL,95.99,REAL,95.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id9_0008.mp4,REAL,REAL,100.00,REAL,96.28,REAL,66.04,75.85,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0012.mp4,REAL,FAKE,47.57,FAKE,95.05,REAL,85.33,80.54,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id9_0002.mp4,REAL,REAL,99.40,REAL,99.40,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id3_0009.mp4,REAL,REAL,100.00,REAL,93.98,REAL,85.33,65.98,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id16_0002.mp4,REAL,REAL,70.57,REAL,70.57,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id4_0006.mp4,REAL,REAL,99.85,REAL,99.85,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id17_0003.mp4,REAL,REAL,66.25,REAL,66.25,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id0_0001.mp4,REAL,REAL,88.14,REAL,88.14,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0002.mp4,REAL,REAL,99.78,REAL,99.78,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id9_0000.mp4,REAL,REAL,100.00,REAL,99.79,REAL,100.00,66.57,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0009.mp4,REAL,REAL,99.84,REAL,99.84,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id7_0007.mp4,REAL,REAL,98.40,REAL,98.40,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0001.mp4,REAL,REAL,99.82,REAL,99.82,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id8_0006.mp4,REAL,REAL,100.00,REAL,99.98,REAL,77.82,68.89,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0008.mp4,REAL,REAL,100.00,REAL,99.98,REAL,92.41,85.75,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id10_0003.mp4,REAL,REAL,97.64,REAL,97.64,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id10_0001.mp4,REAL,REAL,99.42,REAL,99.42,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0010.mp4,REAL,REAL,99.94,REAL,99.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id10_0002.mp4,REAL,REAL,99.63,REAL,99.63,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0007.mp4,REAL,REAL,96.07,REAL,96.07,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id7_0004.mp4,REAL,REAL,98.51,REAL,98.51,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0006.mp4,REAL,REAL,99.49,REAL,99.49,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id17_0009.mp4,REAL,FAKE,96.48,FAKE,96.48,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id12_0002.mp4,REAL,FAKE,99.75,FAKE,99.75,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id3_0005.mp4,REAL,REAL,99.89,REAL,99.89,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id0_0005.mp4,REAL,FAKE,96.44,FAKE,96.44,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id2_0005.mp4,REAL,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id16_0004.mp4,REAL,REAL,99.70,REAL,99.70,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id17_0000.mp4,REAL,REAL,99.98,REAL,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id10_0005.mp4,REAL,FAKE,94.00,FAKE,94.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id6_0006.mp4,REAL,REAL,91.66,REAL,91.66,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id10_0000.mp4,REAL,REAL,99.98,REAL,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id9_0007.mp4,REAL,FAKE,100.00,FAKE,73.22,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id12_0006.mp4,REAL,FAKE,85.69,FAKE,85.69,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id3_0008.mp4,REAL,REAL,100.00,REAL,99.67,REAL,83.02,84.91,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0002.mp4,REAL,REAL,80.57,REAL,80.57,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0001.mp4,REAL,REAL,98.26,REAL,98.26,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0008.mp4,REAL,REAL,99.96,REAL,99.96,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id17_0005.mp4,REAL,REAL,99.13,REAL,99.13,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id11_0004.mp4,REAL,REAL,99.71,REAL,99.71,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id2_0002.mp4,REAL,REAL,99.91,REAL,99.91,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id8_0009.mp4,REAL,REAL,75.44,REAL,75.44,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id4_0008.mp4,REAL,REAL,98.36,REAL,98.36,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0006.mp4,REAL,FAKE,100.00,FAKE,100.00,FAKE,90.39,63.07,Strong Fusion (CNN-RNN and rPPG agree on FAKE),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id11_0009.mp4,REAL,REAL,99.94,REAL,99.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id6_0003.mp4,REAL,REAL,99.56,REAL,99.56,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id4_0002.mp4,REAL,REAL,98.47,REAL,98.47,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id2_0009.mp4,REAL,REAL,99.95,REAL,99.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id6_0005.mp4,REAL,REAL,99.93,REAL,99.93,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id4_0003.mp4,REAL,REAL,47.97,REAL,99.96,FAKE,100.00,55.70,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id9_0004.mp4,REAL,REAL,99.89,REAL,99.89,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id7_0008.mp4,REAL,FAKE,97.42,FAKE,97.42,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0003.mp4,REAL,REAL,100.00,REAL,99.90,REAL,100.00,70.64,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id3_0006.mp4,REAL,REAL,95.17,REAL,95.17,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id11_0000.mp4,REAL,REAL,99.85,REAL,99.85,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0009.mp4,REAL,FAKE,99.78,FAKE,99.78,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id6_0004.mp4,REAL,REAL,100.00,REAL,96.52,REAL,83.02,66.79,Strong Fusion (CNN-RNN and rPPG agree on REAL),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id9_0003.mp4,REAL,REAL,49.73,REAL,99.14,FAKE,88.46,60.16,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id12_0003.mp4,REAL,FAKE,98.98,FAKE,98.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0004.mp4,REAL,REAL,54.74,REAL,54.74,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id0_0009.mp4,REAL,REAL,99.93,REAL,99.93,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id6_0001.mp4,REAL,REAL,99.96,REAL,99.96,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id11_0001.mp4,REAL,REAL,98.77,REAL,98.77,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id4_0005.mp4,REAL,REAL,99.39,REAL,99.39,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id12_0000.mp4,REAL,REAL,98.90,REAL,98.90,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id7_0003.mp4,REAL,REAL,48.63,REAL,99.98,FAKE,96.67,61.13,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id8_0005.mp4,REAL,REAL,99.90,REAL,99.90,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id2_0004.mp4,REAL,REAL,47.97,REAL,99.95,FAKE,100.00,58.42,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id1_0005.mp4,REAL,FAKE,100.00,FAKE,93.57,FAKE,100.00,57.06,Strong Fusion (CNN-RNN and rPPG agree on FAKE),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id7_0002.mp4,REAL,REAL,99.95,REAL,99.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id9_0009.mp4,REAL,REAL,55.44,REAL,55.44,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0003.mp4,REAL,REAL,88.61,REAL,88.61,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id8_0008.mp4,REAL,REAL,99.81,REAL,99.81,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id2_0006.mp4,REAL,REAL,94.03,REAL,94.03,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id0_0004.mp4,REAL,REAL,99.48,REAL,99.48,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id7_0005.mp4,REAL,REAL,99.97,REAL,99.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id13_0013.mp4,REAL,REAL,98.41,REAL,98.41,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id4_0009.mp4,REAL,REAL,27.30,REAL,67.71,FAKE,100.00,54.34,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id3_0002.mp4,REAL,REAL,47.46,REAL,99.20,FAKE,100.00,73.36,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id6_0008.mp4,REAL,REAL,99.79,REAL,99.79,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id3_0003.mp4,REAL,REAL,99.87,REAL,99.87,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id16_0006.mp4,REAL,FAKE,99.93,FAKE,99.93,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id12_0005.mp4,REAL,REAL,99.80,REAL,99.80,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-real\id7_0009.mp4,REAL,FAKE,24.91,FAKE,62.24,REAL,93.21,74.72,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id3_0004.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id17_id9_0001.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id8_id6_0008.mp4,FAKE,FAKE,99.87,FAKE,99.87,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id9_id4_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id0_0001.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id17_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id0_0006.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id7_id13_0009.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id8_id7_0007.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id10_id7_0007.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,61.13,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id16_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id1_0001.mp4,FAKE,FAKE,75.96,FAKE,75.96,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id6_0007.mp4,FAKE,FAKE,99.89,FAKE,99.89,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id2_0001.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id1_0001.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id4_id0_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,55.70,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id9_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id0_0008.mp4,FAKE,FAKE,99.26,FAKE,99.26,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id0_0009.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id3_0007.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id4_id3_0007.mp4,FAKE,FAKE,48.00,FAKE,100.00,REAL,100.00,72.00,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id9_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id1_0001.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id1_0009.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id9_0000.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id11_id7_0008.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id13_id10_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id16_0002.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id0_0012.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id9_id4_0009.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id17_0005.mp4,FAKE,FAKE,99.97,FAKE,99.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id4_id0_0001.mp4,FAKE,FAKE,83.14,FAKE,83.14,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id6_0004.mp4,FAKE,FAKE,100.00,FAKE,99.99,FAKE,94.45,58.22,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id13_id10_0012.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,88.91,60.16,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id17_0004.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,59.77,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id17_0009.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id9_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id17_id3_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id0_0006.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id2_0001.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id16_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id9_0007.mp4,FAKE,FAKE,47.96,FAKE,99.93,REAL,100.00,65.66,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id4_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id16_0001.mp4,FAKE,FAKE,93.20,FAKE,93.20,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id9_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,88.74,64.53,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id2_0006.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id9_id17_0009.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id17_0011.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id1_id0_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,59.77,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id17_id3_0009.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id10_id12_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id4_id1_0001.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id3_0006.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id11_id7_0004.mp4,FAKE,FAKE,99.74,FAKE,99.74,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id16_0006.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id7_id11_0004.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id7_id10_0009.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id8_id1_0008.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id9_id17_0007.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id10_id7_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id3_0005.mp4,FAKE,FAKE,99.92,FAKE,99.92,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id17_0000.mp4,FAKE,FAKE,100.00,FAKE,99.90,FAKE,93.21,63.40,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id7_id10_0004.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id1_id3_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,58.42,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id1_id3_0002.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id4_id1_0008.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id7_id13_0000.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id8_id9_0002.mp4,FAKE,FAKE,100.00,FAKE,99.98,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id0_0000.mp4,FAKE,FAKE,100.00,FAKE,99.93,FAKE,93.21,63.40,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id17_0012.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id13_id10_0008.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id10_id12_0007.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,61.13,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id1_id2_0000.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id4_0006.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id17_0003.mp4,FAKE,FAKE,99.55,FAKE,99.55,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id17_id3_0001.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id0_0004.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,59.77,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id16_id2_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id8_id0_0002.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id1_0006.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id10_id11_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id4_id6_0002.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id7_id12_0007.mp4,FAKE,FAKE,99.81,FAKE,99.81,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id12_id10_0006.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id1_id0_0004.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id6_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id1_id9_0007.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id9_id3_0006.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id0_id3_0007.mp4,FAKE,FAKE,48.00,FAKE,100.00,REAL,100.00,70.19,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id3_id1_0007.mp4,FAKE,FAKE,96.13,FAKE,96.13,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id2_id4_0002.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id1_0004.mp4,FAKE,FAKE,51.49,FAKE,99.99,REAL,83.02,84.91,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id10_id13_0002.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id1_id9_0003.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,93.21,60.00,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id13_id10_0011.mp4,FAKE,FAKE,99.56,FAKE,99.56,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id7_id10_0002.mp4,FAKE,FAKE,99.95,FAKE,99.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id10_id13_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id9_id0_0007.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id9_id2_0008.mp4,FAKE,FAKE,100.00,FAKE,99.99,FAKE,100.00,74.72,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\Celeb-DF\Celeb-synthesis\id6_id0_0005.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1

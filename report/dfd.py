@@ -500,6 +500,7 @@ class EnhancedFusionSystem:
         else:
             # Strong rPPG fusion only when rPPG has meaningful confidence
             
+            # Weight factors based on relative confidence levels
             # Scale weights by confidence levels - higher confidence gets more weight
             total_confidence = deepfake_confidence + rppg_confidence
             if total_confidence == 0:  # Avoid division by zero
@@ -548,15 +549,15 @@ class EnhancedFusionSystem:
                     method = f"rPPG Override (strong physiological evidence contradicts CNN-RNN)"
                 else:
                     # Default to CNN-RNN if there's disagreement and no strong confidence from rPPG
-                    # if weighted_cnn_rnn >= weighted_rppg or rppg_confidence < 30:
-                    final_prediction = deepfake_pred
-                    # Reduce confidence slightly due to disagreement
-                    final_confidence = weighted_cnn_rnn * 0.8
-                    method = f"CNN-RNN Primary (rPPG disagrees)"
-                    # else:
-                    #     final_prediction = rppg_pred
-                    #     final_confidence = weighted_rppg * 0.8
-                    #     method = f"rPPG Primary (contradicts CNN-RNN)"
+                    if weighted_cnn_rnn >= weighted_rppg or rppg_confidence < 30:
+                        final_prediction = deepfake_pred
+                        # Reduce confidence slightly due to disagreement
+                        final_confidence = weighted_cnn_rnn * 0.8
+                        method = f"CNN-RNN Primary (rPPG disagrees)"
+                    else:
+                        final_prediction = rppg_pred
+                        final_confidence = weighted_rppg * 0.8
+                        method = f"rPPG Primary (contradicts CNN-RNN)"
                 
                 fusion_result = {
                     "prediction": final_prediction,
@@ -577,133 +578,134 @@ class EnhancedFusionSystem:
     
     def _visualize_results(self, frames=None):
         # """Create enhanced visualization of the results with clear display of predictions"""
-        plt.figure(figsize=(15, 10))
-        
-        # Plot 1: Heart Rate over time
-        plt.subplot(2, 2, 1)
-        plt.title('Heart Rate Over Time')
-        heart_rates = self.rppg_results.get("heart_rates", np.array([]))
-        if isinstance(heart_rates, np.ndarray) and heart_rates.size > 0:
-            hrs = heart_rates
+        # plt.figure(figsize=(15, 10))
+    
+        # # Plot 1: Heart Rate over time
+        # plt.subplot(2, 2, 1)
+        # plt.title('Heart Rate Over Time')
+        # heart_rates = self.rppg_results.get("heart_rates", np.array([]))
+        # if isinstance(heart_rates, np.ndarray) and heart_rates.size > 0:
+        #     hrs = heart_rates
             
-            # Plot raw heart rates in light color
-            plt.plot(hrs, 'lightblue', alpha=0.5, label='Raw HR')
+        #     # Plot raw heart rates in light color
+        #     plt.plot(hrs, 'lightblue', alpha=0.5, label='Raw HR')
             
-            # Plot smoothed heart rates in darker color
-            if heart_rates.size >= 5:
-                smoothed = moving_avg(hrs, 5)
-                plt.plot(range(2, len(smoothed)+2), smoothed, 'blue', linewidth=2, label='Smoothed HR')
+        #     # Plot smoothed heart rates in darker color
+        #     if heart_rates.size >= 5:
+        #         smoothed = moving_avg(hrs, 5)
+        #         plt.plot(range(2, len(smoothed)+2), smoothed, 'blue', linewidth=2, label='Smoothed HR')
             
-            plt.ylim(65, 120)
-            plt.xlabel('Frames')
-            plt.ylabel('BPM')
-            plt.legend()
+        #     plt.ylim(65, 120)
+        #     plt.xlabel('Frames')
+        #     plt.ylabel('BPM')
+        #     plt.legend()
             
-            # Add plausibility region
-            plt.axhspan(65, 120, alpha=0.2, color='green', label='Normal HR Range')
+        #     # Add plausibility region
+        #     plt.axhspan(65, 120, alpha=0.2, color='green', label='Normal HR Range')
             
-        else:
-            plt.text(0.5, 0.5, 'No heart rate data available', ha='center', va='center')
+        # else:
+        #     plt.text(0.5, 0.5, 'No heart rate data available', ha='center', va='center')
         
-        # Plot 2: Deepfake Detection Results
-        plt.subplot(2, 2, 2)
-        plt.title('CNN-RNN Deepfake Detection')
-        labels = ['FAKE', 'REAL']
-        if self.deepfake_results.get("probabilities") is not None:
-            probs = self.deepfake_results["probabilities"][0]
-            plt.bar(labels, probs, color=['red', 'green'])
-            plt.ylim(0, 1)
-            for i, v in enumerate(probs):
-                plt.text(i, v + 0.05, f'{v:.2f}', ha='center')
+        # # Plot 2: Deepfake Detection Results
+        # plt.subplot(2, 2, 2)
+        # plt.title('CNN-RNN Deepfake Detection')
+        # labels = ['FAKE', 'REAL']
+        # if self.deepfake_results.get("probabilities") is not None:
+        #     probs = self.deepfake_results["probabilities"][0]
+        #     plt.bar(labels, probs, color=['red', 'green'])
+        #     plt.ylim(0, 1)
+        #     for i, v in enumerate(probs):
+        #         plt.text(i, v + 0.05, f'{v:.2f}', ha='center')
             
-            # Add text showing the prediction and confidence
-            prediction = self.deepfake_results["prediction"]
-            confidence = self.deepfake_results["confidence"]
-            plt.text(0.5, -0.15, f'Prediction: {prediction}\nConfidence: {confidence:.2f}%', 
-                    transform=plt.gca().transAxes, ha='center', 
-                    bbox=dict(facecolor='yellow', alpha=0.2))
-        else:
-            plt.text(0.5, 0.5, 'No deepfake detection results available', ha='center', va='center')
+        #     # Add text showing the prediction and confidence
+        #     prediction = self.deepfake_results["prediction"]
+        #     confidence = self.deepfake_results["confidence"]
+        #     plt.text(0.5, -0.15, f'Prediction: {prediction}\nConfidence: {confidence:.2f}%', 
+        #             transform=plt.gca().transAxes, ha='center', 
+        #             bbox=dict(facecolor='yellow', alpha=0.2))
+        # else:
+        #     plt.text(0.5, 0.5, 'No deepfake detection results available', ha='center', va='center')
         
-        # Plot 3: Display a frame used by CNN-RNN with face detection
-        plt.subplot(2, 2, 3)
-        plt.title('CNN-RNN Input Frame')
+        # # Plot 3: Display a frame used by CNN-RNN with face detection
+        # plt.subplot(2, 2, 3)
+        # plt.title('CNN-RNN Input Frame')
         
-        if self.original_frames and len(self.original_frames) > 0:
-            # Get a middle frame to display
-            frame_idx = min(len(self.original_frames) // 2, len(self.original_frames) - 1)
-            frame = self.original_frames[frame_idx]
+        # if self.original_frames and len(self.original_frames) > 0:
+        #     # Get a middle frame to display
+        #     frame_idx = min(len(self.original_frames) // 2, len(self.original_frames) - 1)
+        #     frame = self.original_frames[frame_idx]
             
-            # Convert BGR to RGB for display
-            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        #     # Convert BGR to RGB for display
+        #     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             
-            # Display frame
-            plt.imshow(frame_rgb)
-            plt.axis('off')
-        else:
-            # If no original frames, show the sample frame if available
-            if frames is not None:
-                sample_frame = frames[0, 0].cpu().numpy().transpose(1, 2, 0)
-                # Denormalize
-                sample_frame = (sample_frame - sample_frame.min()) / (sample_frame.max() - sample_frame.min())
-                plt.imshow(sample_frame)
-                plt.axis('off')
-            else:
-                plt.text(0.5, 0.5, 'No frames available', ha='center', va='center')
+        #     # Display frame
+        #     plt.imshow(frame_rgb)
+        #     plt.axis('off')
+        # else:
+        #     # If no original frames, show the sample frame if available
+        #     if frames is not None:
+        #         sample_frame = frames[0, 0].cpu().numpy().transpose(1, 2, 0)
+        #         # Denormalize
+        #         sample_frame = (sample_frame - sample_frame.min()) / (sample_frame.max() - sample_frame.min())
+        #         plt.imshow(sample_frame)
+        #         plt.axis('off')
+        #     else:
+        #         plt.text(0.5, 0.5, 'No frames available', ha='center', va='center')
         
-        # Plot 4: Overall Fusion Result
-        plt.subplot(2, 2, 4)
-        plt.title('FUSION RESULT')
-        plt.axis('off')
-        fusion_result = self._fuse_results()
+        # # Plot 4: Overall Fusion Result
+        # plt.subplot(2, 2, 4)
+        # plt.title('FUSION RESULT')
+        # plt.axis('off')
+        # fusion_result = self._fuse_results()
         
-        # Format the prediction with color
-        prediction_color = 'green' if fusion_result['prediction'] == 'REAL' else 'red'
+        # # Format the prediction with color
+        # prediction_color = 'green' if fusion_result['prediction'] == 'REAL' else 'red'
         
-        # Add a colored box for the overall prediction
-        plt.text(0.5, 0.9, f"FINAL PREDICTION: {fusion_result['prediction']}", 
-                fontsize=16, fontweight='bold', 
-                color='white', ha='center',
-                bbox=dict(facecolor=prediction_color, alpha=0.8))
+        # # Add a colored box for the overall prediction
+        # plt.text(0.5, 0.9, f"FINAL PREDICTION: {fusion_result['prediction']}", 
+        #         fontsize=16, fontweight='bold', 
+        #         color='white', ha='center',
+        #         bbox=dict(facecolor=prediction_color, alpha=0.8))
         
-        # Display the model predictions side by side
-        cnn_color = 'green' if fusion_result['cnn_rnn_prediction'] == 'REAL' else 'red'
-        rppg_color = 'green' if fusion_result['rppg_prediction'] == 'REAL' else 'red'
+        # # Display the model predictions side by side
+        # cnn_color = 'green' if fusion_result['cnn_rnn_prediction'] == 'REAL' else 'red'
+        # rppg_color = 'green' if fusion_result['rppg_prediction'] == 'REAL' else 'red'
         
-        # CNN-RNN prediction
-        plt.text(0.25, 0.75, "CNN-RNN", fontsize=14, fontweight='bold', ha='center')
-        plt.text(0.25, 0.7, f"Prediction: {fusion_result['cnn_rnn_prediction']}", 
-                fontsize=12, color=cnn_color, ha='center', fontweight='bold')
-        plt.text(0.25, 0.65, f"Confidence: {fusion_result['cnn_rnn_confidence']:.2f}%", 
-                fontsize=12, ha='center')
+        # # CNN-RNN prediction
+        # plt.text(0.25, 0.75, "CNN-RNN", fontsize=14, fontweight='bold', ha='center')
+        # plt.text(0.25, 0.7, f"Prediction: {fusion_result['cnn_rnn_prediction']}", 
+        #         fontsize=12, color=cnn_color, ha='center', fontweight='bold')
+        # plt.text(0.25, 0.65, f"Confidence: {fusion_result['cnn_rnn_confidence']:.2f}%", 
+        #         fontsize=12, ha='center')
         
-        # rPPG prediction
-        plt.text(0.75, 0.75, "rPPG", fontsize=14, fontweight='bold', ha='center')
-        plt.text(0.75, 0.7, f"Prediction: {fusion_result['rppg_prediction']}", 
-                fontsize=12, color=rppg_color, ha='center', fontweight='bold')
-        plt.text(0.75, 0.65, f"Confidence: {fusion_result['rppg_confidence']:.2f}%", 
-                fontsize=12, ha='center')
+        # # rPPG prediction
+        # plt.text(0.75, 0.75, "rPPG", fontsize=14, fontweight='bold', ha='center')
+        # plt.text(0.75, 0.7, f"Prediction: {fusion_result['rppg_prediction']}", 
+        #         fontsize=12, color=rppg_color, ha='center', fontweight='bold')
+        # plt.text(0.75, 0.65, f"Confidence: {fusion_result['rppg_confidence']:.2f}%", 
+        #         fontsize=12, ha='center')
         
-        # Fusion method and confidence
-        plt.text(0.5, 0.5, f"Fusion Method: {fusion_result['method']}", 
-                fontsize=12, ha='center')
-        plt.text(0.5, 0.45, f"Overall Confidence: {fusion_result['confidence']:.2f}%", 
-                fontsize=12, ha='center', fontweight='bold')
+        # # Fusion method and confidence
+        # plt.text(0.5, 0.5, f"Fusion Method: {fusion_result['method']}", 
+        #         fontsize=12, ha='center')
+        # plt.text(0.5, 0.45, f"Overall Confidence: {fusion_result['confidence']:.2f}%", 
+        #         fontsize=12, ha='center', fontweight='bold')
         
-        # Heart rate info if available
-        if 'heart_rate' in fusion_result and fusion_result['heart_rate'] > 0:
-            plt.text(0.5, 0.35, f"Heart Rate: {fusion_result['heart_rate']:.1f} BPM", 
-                    fontsize=12, ha='center')
-            plt.text(0.5, 0.3, f"Physiologically Plausible: {fusion_result['hr_plausible']}", 
-                    fontsize=12, ha='center')
+        # # Heart rate info if available
+        # if 'heart_rate' in fusion_result and fusion_result['heart_rate'] > 0:
+        #     plt.text(0.5, 0.35, f"Heart Rate: {fusion_result['heart_rate']:.1f} BPM", 
+        #             fontsize=12, ha='center')
+        #     plt.text(0.5, 0.3, f"Physiologically Plausible: {fusion_result['hr_plausible']}", 
+        #             fontsize=12, ha='center')
             
-            if 'physio_score' in fusion_result and fusion_result['physio_score'] > 0:
-                plt.text(0.5, 0.25, f"Physiological Score: {fusion_result['physio_score']:.1f}/100", 
-                        fontsize=12, ha='center')
+        #     if 'physio_score' in fusion_result and fusion_result['physio_score'] > 0:
+        #         plt.text(0.5, 0.25, f"Physiological Score: {fusion_result['physio_score']:.1f}/100", 
+        #                 fontsize=12, ha='center')
         
-        plt.tight_layout()
-        plt.savefig('fusion_results.png')
-        plt.show()
+        # plt.tight_layout()
+        # plt.savefig('fusion_results.png')
+        # plt.show()
+        return
 # Main execution function
 def run_deepfake_detection(
     video_path=None,                     

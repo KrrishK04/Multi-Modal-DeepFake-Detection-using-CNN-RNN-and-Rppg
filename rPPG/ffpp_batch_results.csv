@@ -1,0 +1,384 @@
+file,label,final_prediction,final_confidence,cnn_pred,cnn_conf,rppg_pred,rppg_conf,heart_rate,fusion_method,correct
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\28_16__podium_speech_happy__6DWLCU6T.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\12_14__walk_down_hall_angry__Z7EWFA0P.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\835_651.mp4,FAKE,REAL,87.00,REAL,87.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\741_731.mp4,FAKE,REAL,48.82,REAL,99.90,FAKE,95.47,55.85,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\040_997.mp4,FAKE,FAKE,50.98,FAKE,50.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\553_545.mp4,FAKE,REAL,46.71,REAL,98.07,FAKE,100.00,61.58,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\366_473.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\290_240.mp4,FAKE,REAL,98.08,REAL,98.08,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\223_586.mp4,FAKE,REAL,99.98,REAL,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\969_897.mp4,FAKE,REAL,99.63,REAL,99.63,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\327_329.mp4,FAKE,REAL,97.83,REAL,97.83,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\888_937.mp4,FAKE,REAL,100.00,REAL,98.97,REAL,72.54,78.79,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\09_02__walk_down_hall_angry__6KUOFMZW.mp4,FAKE,FAKE,96.97,FAKE,96.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\791_770.mp4,FAKE,FAKE,77.20,FAKE,77.20,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\076_079.mp4,FAKE,REAL,35.31,FAKE,68.11,REAL,92.75,75.47,rPPG Primary (contradicts CNN-RNN),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\495_512.mp4,FAKE,FAKE,50.40,FAKE,99.15,REAL,85.36,79.70,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\247_229.mp4,FAKE,REAL,33.91,REAL,76.57,FAKE,92.61,56.93,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\542_520.mp4,FAKE,REAL,99.66,REAL,99.66,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\03_07__kitchen_pan__WPT3Z2KN.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\766_761.mp4,FAKE,REAL,99.90,REAL,99.90,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\21_07__kitchen_pan__K7KXUHMU.mp4,FAKE,FAKE,99.56,FAKE,99.56,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\559_543.mp4,FAKE,FAKE,70.40,FAKE,70.40,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\982_004.mp4,FAKE,FAKE,56.80,FAKE,99.93,REAL,61.08,55.25,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\426_287.mp4,FAKE,REAL,63.57,REAL,63.57,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\214_255.mp4,FAKE,REAL,57.42,REAL,94.95,FAKE,46.00,63.40,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\000_003.mp4,FAKE,REAL,97.54,REAL,97.54,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\19_24__walk_down_hall_angry__59PN7WZ2.mp4,FAKE,FAKE,99.88,FAKE,99.88,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\369_316.mp4,FAKE,REAL,99.57,REAL,99.57,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\216_164.mp4,FAKE,REAL,100.00,REAL,79.19,REAL,71.92,57.96,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\303_309.mp4,FAKE,REAL,99.95,REAL,99.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\032_944.mp4,FAKE,REAL,99.55,REAL,99.55,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\945_044.mp4,FAKE,REAL,57.77,REAL,57.77,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\602_397.mp4,FAKE,REAL,97.33,REAL,77.30,REAL,57.85,74.26,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\021_312.mp4,FAKE,FAKE,74.95,FAKE,74.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\464_463.mp4,FAKE,REAL,96.44,REAL,96.44,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\393_405.mp4,FAKE,REAL,70.28,REAL,70.28,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\470_468.mp4,FAKE,REAL,99.89,REAL,99.89,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\900_926.mp4,FAKE,REAL,89.41,REAL,89.41,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\704_723.mp4,FAKE,FAKE,61.53,FAKE,61.53,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\639_841.mp4,FAKE,REAL,99.31,REAL,99.31,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\523_541.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\535_587.mp4,FAKE,REAL,65.32,REAL,65.32,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\129_127.mp4,FAKE,FAKE,99.97,FAKE,99.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\493_538.mp4,FAKE,FAKE,52.14,FAKE,52.14,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\421_423.mp4,FAKE,FAKE,88.82,FAKE,77.99,FAKE,61.70,63.40,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\640_638.mp4,FAKE,FAKE,99.47,FAKE,99.47,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\346_351.mp4,FAKE,FAKE,55.09,FAKE,100.00,REAL,67.83,79.70,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\302_323.mp4,FAKE,REAL,99.81,REAL,99.81,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\821_812.mp4,FAKE,REAL,49.25,REAL,99.87,FAKE,93.22,58.36,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\908_207.mp4,FAKE,REAL,86.14,REAL,86.14,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\526_436.mp4,FAKE,REAL,99.97,REAL,99.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\058_039.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\980_992.mp4,FAKE,REAL,98.94,REAL,98.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\466_428.mp4,FAKE,REAL,56.14,REAL,99.94,FAKE,63.58,57.06,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\464_463.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\761_766.mp4,FAKE,REAL,98.93,REAL,98.93,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\041_063.mp4,FAKE,REAL,99.91,REAL,99.91,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\855_801.mp4,FAKE,REAL,26.02,REAL,58.94,FAKE,71.82,57.06,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\541_523.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\728_673.mp4,FAKE,REAL,99.77,REAL,99.77,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\801_855.mp4,FAKE,FAKE,67.14,FAKE,67.14,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\01_11__hugging_happy__4OJNJLOO.mp4,FAKE,FAKE,97.43,FAKE,97.43,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\526_436.mp4,FAKE,FAKE,79.22,FAKE,79.22,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\187_234.mp4,FAKE,REAL,99.83,REAL,99.83,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\20_09__kitchen_pan__HG1S0KHA.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\154_386.mp4,FAKE,FAKE,56.65,FAKE,99.24,REAL,59.75,81.51,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\637_427.mp4,FAKE,FAKE,99.67,FAKE,99.67,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\117_217.mp4,FAKE,REAL,54.03,REAL,98.20,FAKE,66.88,65.21,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\160_928.mp4,FAKE,FAKE,100.00,FAKE,85.89,FAKE,100.00,63.40,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\03_20__kitchen_still__Z6V05FXO.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\15_12__talking_angry_couch__N0SRODQD.mp4,FAKE,FAKE,81.74,FAKE,81.74,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\03_27__walking_and_outside_surprised__KWGI1LSZ.mp4,FAKE,REAL,98.73,REAL,98.73,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\12_20__walking_outside_cafe_disgusted__B0X1CGG2.mp4,FAKE,REAL,56.50,REAL,56.50,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\06_26__talking_angry_couch__L5BVR5L9.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\095_053.mp4,FAKE,REAL,78.92,REAL,78.92,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\592_500.mp4,FAKE,FAKE,99.74,FAKE,99.74,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\235_194.mp4,FAKE,REAL,90.58,REAL,90.58,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\022_489.mp4,FAKE,REAL,98.34,REAL,98.34,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\769_784.mp4,FAKE,REAL,81.21,REAL,81.21,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\427_637.mp4,FAKE,FAKE,99.91,FAKE,99.91,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\850_764.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,100.00,90.57,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\623_630.mp4,FAKE,FAKE,63.80,FAKE,63.80,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\180_105.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\02_15__secret_conversation__MZWH8ATN.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\15_03__talking_angry_couch__DNUJD8M2.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\274_412.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\687_615.mp4,FAKE,FAKE,86.20,FAKE,86.20,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\359_317.mp4,FAKE,REAL,85.22,REAL,85.22,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\365_307.mp4,FAKE,REAL,100.00,REAL,80.11,REAL,100.00,79.70,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\545_553.mp4,FAKE,FAKE,41.48,FAKE,90.18,REAL,100.00,67.02,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\389_480.mp4,FAKE,REAL,99.89,REAL,99.89,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\597_595.mp4,FAKE,REAL,66.92,REAL,66.92,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\270_297.mp4,FAKE,REAL,99.91,REAL,99.91,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\876_891.mp4,FAKE,FAKE,99.85,FAKE,99.85,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\112_892.mp4,FAKE,REAL,84.41,REAL,84.41,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\100_077.mp4,FAKE,REAL,47.71,REAL,99.57,FAKE,100.00,112.30,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\936_931.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\05_28__hugging_happy__VR9127O1.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\730_815.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\568_628.mp4,FAKE,REAL,84.16,REAL,60.58,REAL,71.81,76.98,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\02_07__walk_down_hall_angry__U7DEOZNV.mp4,FAKE,FAKE,98.57,FAKE,98.57,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\244_822.mp4,FAKE,REAL,81.64,REAL,81.64,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\705_707.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\395_401.mp4,FAKE,REAL,53.08,REAL,89.17,FAKE,46.00,54.34,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\208_215.mp4,FAKE,REAL,99.44,REAL,99.44,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\711_681.mp4,FAKE,FAKE,99.93,FAKE,99.93,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\990_008.mp4,FAKE,FAKE,99.98,FAKE,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\418_507.mp4,FAKE,REAL,98.98,REAL,98.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\726_713.mp4,FAKE,FAKE,38.66,FAKE,77.33,REAL,69.62,67.92,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\03_09__secret_conversation__RCETIXYL.mp4,FAKE,FAKE,97.13,FAKE,97.13,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\159_175.mp4,FAKE,REAL,97.26,REAL,97.26,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\03_13__talking_against_wall__GBYWJW06.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\278_306.mp4,FAKE,FAKE,97.35,FAKE,97.35,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\200_189.mp4,FAKE,REAL,73.79,REAL,73.79,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\602_397.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\865_739.mp4,FAKE,REAL,90.87,REAL,90.87,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\872_873.mp4,FAKE,REAL,100.00,REAL,95.49,REAL,76.84,84.23,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\700_813.mp4,FAKE,FAKE,99.94,FAKE,99.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\863_853.mp4,FAKE,REAL,80.83,REAL,80.83,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\510_528.mp4,FAKE,FAKE,99.26,FAKE,99.26,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\024_073.mp4,FAKE,FAKE,99.98,FAKE,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\396_272.mp4,FAKE,FAKE,99.45,FAKE,99.45,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\131_518.mp4,FAKE,FAKE,99.74,FAKE,99.74,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\035_036.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\388_308.mp4,FAKE,FAKE,51.81,FAKE,100.00,REAL,81.63,76.98,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\543_559.mp4,FAKE,REAL,99.17,REAL,99.17,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\449_451.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\829_808.mp4,FAKE,REAL,69.76,REAL,69.76,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\378_368.mp4,FAKE,FAKE,57.49,FAKE,100.00,REAL,58.72,71.55,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\075_977.mp4,FAKE,FAKE,100.00,FAKE,99.29,FAKE,56.70,63.40,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\18_12__outside_talking_pan_laughing__IKH1LBBY.mp4,FAKE,FAKE,96.87,FAKE,96.87,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\392_339.mp4,FAKE,REAL,75.82,REAL,75.82,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\733_935.mp4,FAKE,REAL,100.00,REAL,99.98,REAL,72.18,72.45,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\374_407.mp4,FAKE,REAL,95.99,REAL,95.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\232_248.mp4,FAKE,REAL,99.63,REAL,99.63,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\615_687.mp4,FAKE,REAL,99.79,REAL,99.79,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\009_027.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\18_02__kitchen_still__B95S4G6F.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\03_07__walking_outside_cafe_disgusted__IFSURI9X.mp4,FAKE,FAKE,92.07,FAKE,92.07,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\728_673.mp4,FAKE,FAKE,84.22,FAKE,84.22,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\746_571.mp4,FAKE,REAL,60.66,REAL,60.66,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\065_089.mp4,FAKE,FAKE,48.31,FAKE,95.70,REAL,83.95,96.91,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\947_951.mp4,FAKE,REAL,80.06,REAL,80.06,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\031_163.mp4,FAKE,REAL,99.31,REAL,99.31,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\336_338.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\454_527.mp4,FAKE,REAL,47.91,REAL,99.87,FAKE,100.00,54.34,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\02_27__walk_down_hall_angry__78M8S6M6.mp4,FAKE,REAL,74.68,REAL,74.68,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\417_496.mp4,FAKE,REAL,99.69,REAL,99.69,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\598_178.mp4,FAKE,FAKE,99.98,FAKE,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\689_690.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\117_217.mp4,FAKE,REAL,100.00,REAL,99.36,REAL,85.09,65.21,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\354_362.mp4,FAKE,FAKE,99.69,FAKE,99.69,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\195_442.mp4,FAKE,FAKE,99.23,FAKE,99.23,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\02_15__talking_angry_couch__HTG660F8.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\119_123.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\611_760.mp4,FAKE,FAKE,92.67,FAKE,92.67,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\466_428.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\281_474.mp4,FAKE,REAL,99.88,REAL,99.88,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\566_617.mp4,FAKE,REAL,96.64,REAL,96.64,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\264_271.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\647_622.mp4,FAKE,REAL,82.67,REAL,82.67,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\821_812.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,74.38,62.39,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\082_103.mp4,FAKE,REAL,52.74,REAL,52.74,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\920_811.mp4,FAKE,REAL,100.00,REAL,98.99,REAL,68.08,67.92,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\534_490.mp4,FAKE,REAL,37.72,REAL,72.75,FAKE,59.25,105.66,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\118_120.mp4,FAKE,REAL,99.34,REAL,99.34,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\588_556.mp4,FAKE,FAKE,100.00,FAKE,53.92,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\919_015.mp4,FAKE,REAL,92.94,REAL,92.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\138_142.mp4,FAKE,REAL,64.27,REAL,64.27,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\452_550.mp4,FAKE,FAKE,99.89,FAKE,99.89,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\254_261.mp4,FAKE,REAL,99.70,REAL,99.70,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\14_18__outside_talking_still_laughing__6SB2BR0A.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\029_048.mp4,FAKE,FAKE,48.76,FAKE,100.00,REAL,96.08,89.43,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\511_472.mp4,FAKE,REAL,99.48,REAL,99.48,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\238_282.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\352_319.mp4,FAKE,FAKE,99.96,FAKE,99.96,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\609_596.mp4,FAKE,REAL,99.36,REAL,99.36,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\939_115.mp4,FAKE,REAL,90.38,REAL,90.38,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\336_338.mp4,FAKE,FAKE,98.19,FAKE,98.19,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\18_14__secret_conversation__HYMNQ00Q.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\830_828.mp4,FAKE,FAKE,99.37,FAKE,99.37,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\590_034.mp4,FAKE,FAKE,60.44,FAKE,60.44,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\403_497.mp4,FAKE,FAKE,100.00,FAKE,96.01,FAKE,55.94,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\917_924.mp4,FAKE,REAL,99.94,REAL,99.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\322_315.mp4,FAKE,FAKE,99.95,FAKE,99.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\649_816.mp4,FAKE,REAL,100.00,REAL,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\14_01__hugging_happy__0S0NS5C6.mp4,FAKE,FAKE,93.09,FAKE,93.09,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\979_875.mp4,FAKE,REAL,82.16,REAL,82.16,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\582_172.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\07_21__talking_against_wall__MKU99DVX.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\630_623.mp4,FAKE,REAL,59.08,REAL,59.08,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\03_01__outside_talking_still_laughing__JZUXXFRB.mp4,FAKE,FAKE,94.76,FAKE,94.76,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\440_364.mp4,FAKE,REAL,100.00,REAL,99.87,REAL,85.51,86.54,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\550_452.mp4,FAKE,REAL,92.14,REAL,92.14,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\581_697.mp4,FAKE,FAKE,100.00,FAKE,99.96,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\098_092.mp4,FAKE,FAKE,91.00,FAKE,91.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\987_938.mp4,FAKE,REAL,49.79,REAL,99.98,FAKE,90.94,61.89,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\360_437.mp4,FAKE,FAKE,100.00,FAKE,61.57,FAKE,100.00,63.40,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\234_187.mp4,FAKE,REAL,74.31,REAL,74.31,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\969_897.mp4,FAKE,FAKE,96.05,FAKE,96.05,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\613_685.mp4,FAKE,REAL,100.00,REAL,73.55,REAL,92.49,66.79,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\06_02__podium_speech_happy__N8OSN8P6.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\414_385.mp4,FAKE,REAL,70.34,REAL,70.34,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\865_739.mp4,FAKE,FAKE,99.30,FAKE,99.30,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\15_02__hugging_happy__SB6PMCO0.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\050_059.mp4,FAKE,FAKE,54.70,FAKE,100.00,REAL,69.38,67.02,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\12_15__hugging_happy__N0SRODQD.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\050_059.mp4,FAKE,FAKE,100.00,FAKE,99.38,FAKE,71.21,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\170_186.mp4,FAKE,FAKE,100.00,FAKE,97.83,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\604_703.mp4,FAKE,REAL,95.82,REAL,95.82,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\593_577.mp4,FAKE,FAKE,88.06,FAKE,88.06,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\938_987.mp4,FAKE,FAKE,48.00,FAKE,100.00,REAL,100.00,101.13,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\257_420.mp4,FAKE,FAKE,92.92,FAKE,92.92,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\669_682.mp4,FAKE,REAL,99.78,REAL,99.78,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\524_580.mp4,FAKE,REAL,99.92,REAL,99.92,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\13_12__outside_talking_still_laughing__2TM4IFSF.mp4,FAKE,FAKE,98.47,FAKE,98.47,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\813_700.mp4,FAKE,FAKE,98.69,FAKE,98.69,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\482_465.mp4,FAKE,REAL,100.00,REAL,99.96,REAL,100.00,97.81,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\807_273.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\793_768.mp4,FAKE,REAL,91.40,REAL,91.40,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\424_408.mp4,FAKE,REAL,91.00,REAL,91.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\773_652.mp4,FAKE,FAKE,100.00,FAKE,99.65,FAKE,47.22,65.21,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\343_363.mp4,FAKE,REAL,57.35,REAL,57.35,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\468_470.mp4,FAKE,FAKE,53.94,FAKE,99.94,REAL,72.31,65.21,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\096_101.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\495_512.mp4,FAKE,REAL,100.00,REAL,99.75,REAL,73.46,89.66,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\756_503.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\712_716.mp4,FAKE,REAL,98.80,REAL,98.80,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\981_985.mp4,FAKE,REAL,99.79,REAL,99.79,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\01_15__outside_talking_pan_laughing__02HILKYO.mp4,FAKE,REAL,97.20,REAL,97.20,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\21_14__hugging_happy__N0WM4GSV.mp4,FAKE,FAKE,99.91,FAKE,99.91,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\193_030.mp4,FAKE,REAL,87.25,REAL,87.25,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\805_011.mp4,FAKE,FAKE,99.91,FAKE,99.91,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\482_465.mp4,FAKE,FAKE,99.88,FAKE,99.88,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\071_054.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\827_817.mp4,FAKE,REAL,99.55,REAL,99.55,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\794_779.mp4,FAKE,REAL,83.82,REAL,83.82,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\104_126.mp4,FAKE,REAL,99.98,REAL,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\943_942.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\11_21__kitchen_still__N6YQW2AP.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\078_955.mp4,FAKE,REAL,100.00,REAL,99.92,REAL,75.36,80.60,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\263_284.mp4,FAKE,REAL,99.92,REAL,99.92,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\526_436.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\26_27__outside_talking_still_laughing__IE9N0ZI9.mp4,FAKE,REAL,51.57,REAL,51.57,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\07_25__walking_down_street_outside_angry__IKMKYKPG.mp4,FAKE,FAKE,99.98,FAKE,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\19_24__walk_down_hall_angry__RKQTC50P.mp4,FAKE,FAKE,99.75,FAKE,99.75,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\839_864.mp4,FAKE,REAL,98.67,REAL,98.67,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\763_930.mp4,FAKE,FAKE,77.50,FAKE,77.50,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\333_377.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\350_349.mp4,FAKE,REAL,95.92,REAL,95.92,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\114_102.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\442_195.mp4,FAKE,FAKE,98.60,FAKE,98.60,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\27_01__talking_against_wall__ZYCZ30C0.mp4,FAKE,FAKE,97.78,FAKE,97.78,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\110_043.mp4,FAKE,FAKE,56.67,FAKE,100.00,REAL,61.76,95.09,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\19_24__walk_down_hall_angry__OF8LF68K.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\574_547.mp4,FAKE,FAKE,100.00,FAKE,93.75,FAKE,69.45,58.87,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\147_055.mp4,FAKE,FAKE,54.20,FAKE,100.00,REAL,71.38,68.83,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\988_966.mp4,FAKE,REAL,91.32,REAL,91.32,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\635_642.mp4,FAKE,FAKE,99.93,FAKE,99.93,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\14_03__walking_down_indoor_hall_disgust__KJ221YN0.mp4,FAKE,REAL,97.71,REAL,97.71,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\487_477.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\733_935.mp4,FAKE,REAL,56.98,REAL,99.89,FAKE,60.32,78.79,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\499_539.mp4,FAKE,FAKE,56.60,FAKE,56.60,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\409_382.mp4,FAKE,FAKE,99.99,FAKE,99.99,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\811_920.mp4,FAKE,FAKE,48.87,FAKE,99.98,REAL,95.47,84.53,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\300_304.mp4,FAKE,FAKE,57.39,FAKE,97.61,REAL,52.79,54.34,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\21_14__podium_speech_happy__N0WM4GSV.mp4,FAKE,FAKE,95.20,FAKE,95.20,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\861_858.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\795_907.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\749_659.mp4,FAKE,REAL,100.00,REAL,99.66,REAL,56.68,76.08,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\14_01__outside_talking_still_laughing__01YF7VQM.mp4,FAKE,FAKE,99.88,FAKE,99.88,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\159_175.mp4,FAKE,REAL,99.55,REAL,99.55,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\381_376.mp4,FAKE,FAKE,91.22,FAKE,91.22,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\832_762.mp4,FAKE,REAL,98.72,REAL,98.72,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\692_610.mp4,FAKE,REAL,66.95,REAL,66.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\407_374.mp4,FAKE,REAL,60.89,REAL,99.56,FAKE,46.00,54.34,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\310_196.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\099_295.mp4,FAKE,REAL,50.95,REAL,99.84,FAKE,84.98,58.87,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\428_466.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\08_17__kitchen_still__ZCEYWYTC.mp4,FAKE,REAL,96.35,REAL,96.35,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\507_418.mp4,FAKE,REAL,53.35,REAL,99.96,FAKE,74.80,54.34,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\578_636.mp4,FAKE,REAL,99.75,REAL,99.75,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\434_438.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\128_896.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\01_15__meeting_serious__02HILKYO.mp4,FAKE,REAL,99.87,REAL,99.87,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\802_885.mp4,FAKE,REAL,98.67,REAL,98.67,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\328_320.mp4,FAKE,REAL,52.06,REAL,93.43,FAKE,61.06,67.02,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\070_057.mp4,FAKE,REAL,98.92,REAL,98.92,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\797_844.mp4,FAKE,REAL,99.97,REAL,99.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\253_183.mp4,FAKE,FAKE,51.34,FAKE,98.95,REAL,80.44,68.57,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\713_726.mp4,FAKE,REAL,58.71,REAL,99.99,FAKE,54.36,54.34,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\382_409.mp4,FAKE,FAKE,99.96,FAKE,99.96,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\965_948.mp4,FAKE,REAL,99.13,REAL,99.13,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\991_064.mp4,FAKE,FAKE,53.92,FAKE,100.00,REAL,72.55,79.25,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\098_092.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\337_522.mp4,FAKE,REAL,68.10,REAL,68.10,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\920_811.mp4,FAKE,FAKE,99.90,FAKE,99.90,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\327_329.mp4,FAKE,REAL,98.36,REAL,98.36,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\28_16__walking_down_street_outside_angry__U757192N.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\383_353.mp4,FAKE,REAL,82.53,REAL,82.53,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\12_20__talking_against_wall__GHPWDH3C.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\036_035.mp4,FAKE,REAL,99.76,REAL,99.76,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\464_463.mp4,FAKE,REAL,70.43,REAL,70.43,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\284_263.mp4,FAKE,FAKE,97.10,FAKE,97.10,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\936_931.mp4,FAKE,REAL,100.00,REAL,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\631_551.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\293_296.mp4,FAKE,FAKE,79.82,FAKE,79.82,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\18_09__walk_down_hall_angry__3VP8836C.mp4,FAKE,FAKE,99.95,FAKE,99.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\310_196.mp4,FAKE,REAL,91.26,REAL,91.26,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\156_243.mp4,FAKE,REAL,99.49,REAL,99.49,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\365_307.mp4,FAKE,FAKE,100.00,FAKE,81.79,FAKE,100.00,63.40,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\109_107.mp4,FAKE,FAKE,99.98,FAKE,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\443_514.mp4,FAKE,REAL,99.72,REAL,99.72,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\717_684.mp4,FAKE,FAKE,100.00,FAKE,97.63,FAKE,100.00,54.34,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\18_27__kitchen_still__NYHE8D0J.mp4,FAKE,FAKE,99.98,FAKE,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\278_306.mp4,FAKE,FAKE,99.75,FAKE,99.75,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\378_368.mp4,FAKE,REAL,58.85,REAL,96.83,FAKE,45.94,54.34,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\281_474.mp4,FAKE,REAL,99.76,REAL,99.76,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\09_27__walking_down_street_outside_angry__RC9KATOO.mp4,FAKE,FAKE,96.30,FAKE,96.30,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\490_534.mp4,FAKE,REAL,96.94,REAL,96.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\351_346.mp4,FAKE,REAL,100.00,REAL,99.09,REAL,72.16,62.49,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\814_871.mp4,FAKE,REAL,99.96,REAL,99.96,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\164_216.mp4,FAKE,REAL,100.00,REAL,99.59,REAL,70.17,69.74,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\956_958.mp4,FAKE,REAL,98.75,REAL,98.75,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\627_658.mp4,FAKE,FAKE,42.78,FAKE,89.42,REAL,90.13,78.11,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\308_388.mp4,FAKE,REAL,96.81,REAL,96.81,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\051_332.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\22_24__kitchen_pan__XL557XC6.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\07_02__hugging_happy__O4SXNLRL.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\157_245.mp4,FAKE,REAL,54.16,REAL,54.16,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\258_246.mp4,FAKE,REAL,99.97,REAL,99.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\112_892.mp4,FAKE,REAL,100.00,REAL,99.88,REAL,79.75,65.66,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\745_777.mp4,FAKE,FAKE,29.70,FAKE,65.74,REAL,76.03,85.13,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\26_04__walking_outside_cafe_disgusted__MS2MLJP1.mp4,FAKE,REAL,86.39,REAL,86.39,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\191_188.mp4,FAKE,FAKE,99.87,FAKE,99.87,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\14_03__exit_phone_room__KJ221YN0.mp4,FAKE,REAL,70.54,REAL,70.54,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\346_351.mp4,FAKE,FAKE,100.00,FAKE,100.00,FAKE,65.81,65.21,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\871_814.mp4,FAKE,FAKE,93.95,FAKE,93.95,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\385_414.mp4,FAKE,REAL,94.64,REAL,94.64,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\540_536.mp4,FAKE,REAL,99.12,REAL,99.12,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\780_869.mp4,FAKE,FAKE,99.38,FAKE,99.38,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\21_09__hugging_happy__O9ER29Z6.mp4,FAKE,FAKE,91.53,FAKE,91.53,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\762_832.mp4,FAKE,REAL,99.98,REAL,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\011_805.mp4,FAKE,REAL,37.56,REAL,84.14,FAKE,100.00,126.79,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\064_991.mp4,FAKE,FAKE,36.33,REAL,80.14,FAKE,100.00,81.51,rPPG Primary (contradicts CNN-RNN),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\645_688.mp4,FAKE,FAKE,99.29,FAKE,99.29,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\24_19__walking_down_street_outside_angry__GNHYZ84G.mp4,FAKE,FAKE,99.98,FAKE,99.98,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\524_580.mp4,FAKE,REAL,99.96,REAL,99.96,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\186_170.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rPPG data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\588_556.mp4,FAKE,FAKE,51.55,FAKE,99.98,REAL,82.75,64.30,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\12_15__walking_down_street_outside_angry__N0SRODQD.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\076_079.mp4,FAKE,REAL,79.00,REAL,79.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\036_035.mp4,FAKE,REAL,99.54,REAL,99.54,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\765_867.mp4,FAKE,FAKE,99.97,FAKE,99.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\07_03__walk_down_hall_angry__W3MXGEU9.mp4,FAKE,FAKE,99.96,FAKE,99.96,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceShifter\557_560.mp4,FAKE,FAKE,53.82,FAKE,96.39,REAL,62.57,58.0,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\18_25__exit_phone_room__AUC0HY5T.mp4,FAKE,FAKE,99.89,FAKE,99.89,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\044_945.mp4,FAKE,FAKE,99.84,FAKE,99.84,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\473_366.mp4,FAKE,REAL,99.85,REAL,99.85,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\255_214.mp4,FAKE,REAL,59.44,REAL,99.06,FAKE,49.51,134.0,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\341_340.mp4,FAKE,REAL,78.76,REAL,78.76,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\999_960.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\920_811.mp4,FAKE,REAL,99.54,REAL,99.54,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\21_09__outside_talking_still_laughing__O9ER29Z6.mp4,FAKE,FAKE,100.00,FAKE,99.99,FAKE,96.08,57.7,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\263_284.mp4,FAKE,REAL,100.00,REAL,99.93,REAL,53.97,76.1,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\09_26__walk_down_hall_angry__QSE5A0GF.mp4,FAKE,FAKE,99.90,FAKE,99.90,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\444_655.mp4,FAKE,REAL,94.36,REAL,94.36,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\25_18__walk_down_hall_angry__AUC0HY5T.mp4,FAKE,REAL,62.78,REAL,62.78,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\146_256.mp4,FAKE,REAL,58.47,REAL,99.72,FAKE,54.50,54.3,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\068_028.mp4,FAKE,FAKE,84.56,FAKE,68.70,FAKE,74.65,62.5,Strong Fusion (CNN-RNN and rPPG agree on FAKE),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\605_591.mp4,FAKE,REAL,54.89,REAL,98.62,FAKE,64.70,69.7,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\059_050.mp4,FAKE,FAKE,51.47,FAKE,92.12,REAL,59.69,86.0,CNN-RNN Primary (rPPG disagrees),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\109_107.mp4,FAKE,FAKE,99.80,FAKE,99.80,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\NeuralTextures\437_360.mp4,FAKE,REAL,100.00,REAL,99.75,REAL,85.21,77.6,Strong Fusion (CNN-RNN and rPPG agree on REAL),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\868_949.mp4,FAKE,FAKE,99.94,FAKE,99.94,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\DeepFakeDetection\07_03__outside_talking_still_laughing__IFSURI9X.mp4,FAKE,FAKE,99.93,FAKE,99.93,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\882_952.mp4,FAKE,FAKE,84.26,FAKE,84.26,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\276_185.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\754_758.mp4,FAKE,REAL,99.97,REAL,99.97,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\096_101.mp4,FAKE,FAKE,88.89,FAKE,88.89,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Face2Face\641_662.mp4,FAKE,REAL,61.16,REAL,99.92,FAKE,46.00,54.3,CNN-RNN Primary (rPPG disagrees),0
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\Deepfakes\907_795.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1
+C:\Users\KK\Desktop\dfd\FaceForensics++_C23\FaceSwap\009_027.mp4,FAKE,FAKE,100.00,FAKE,100.00,Unknown,0.00,0.00,CNN-RNN only (no/unreliable rppg data),1

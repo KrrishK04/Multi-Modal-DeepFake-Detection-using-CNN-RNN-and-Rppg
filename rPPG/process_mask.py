@@ -92,7 +92,17 @@ class ProcessMasks():
             if signal_extracted >= self.signal_size:
                 self.process_signal(mean)
             else:
-                self.signal[signal_extracted: signal_extracted + mean.shape[0]] = mean
+                # self.signal[signal_extracted: signal_extracted + mean.shape[0]] = mean
+                # --- REPLACEMENT FOR LINE 95 ---
+                num_to_add = mean.shape[0]
+                space_left = self.signal.shape[0] - signal_extracted
+
+                # We can only copy the minimum of the two
+                copy_len = min(num_to_add, space_left)
+
+                if copy_len > 0:
+                    self.signal[signal_extracted : signal_extracted + copy_len] = mean[:copy_len]
+                # --- END OF REPLACEMENT ---
             signal_extracted+=mean.shape[0]
     
 
