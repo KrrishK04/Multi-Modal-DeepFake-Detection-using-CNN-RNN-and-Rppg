@@ -4,6 +4,7 @@ env/
 .env/
 ENV/
 Data
+CroppedFaces.zip
 # Python cache files
 __pycache__/
 *.py[cod]
