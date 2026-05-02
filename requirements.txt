@@ -1,6 +1,7 @@
 torch
 torchvision
 timm
+facenet-pytorch
 numpy
 opencv-python
 matplotlib
@@ -9,3 +10,4 @@ scikit-learn
 tqdm
 seaborn
 ipykernel
+facenet-pytorch 

@@ -32,7 +32,7 @@ class Config:
     # ──────────────────────────── Model/Experiment Name ────────────────
     # Change this for each new model configuration to prevent overwriting
     # Previous model data will be preserved in its own directory
-    MODEL_NAME = "30Frames"  # e.g., "vit_small_temporal_v2", "resnext_lstm_v1", etc.
+    MODEL_NAME = "30Frames"  # subfolder under checkpoints/ for save/load; must match where checkpoint.pt lives
     
     CHECKPOINT_DIR    = os.path.join(PROJECT_ROOT, "checkpoints", MODEL_NAME)
 
@@ -48,7 +48,7 @@ class Config:
     if DEVICE.type == "cuda":
         BATCH_SIZE = 8          # ViT-S + 16 frames × 224² is heavier
     elif DEVICE.type == "mps":
-        BATCH_SIZE = 4
+        BATCH_SIZE = 8
     else:
         BATCH_SIZE = 2
 

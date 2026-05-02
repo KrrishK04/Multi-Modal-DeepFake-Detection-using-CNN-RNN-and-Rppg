@@ -26,6 +26,7 @@ test
 *.h5
 *.npy
 *.pkl
+checkpoints
 
 # Images and videos generated during runtime
 *.png
@@ -33,6 +34,7 @@ test
 *.jpeg
 *.mp4
 *.avi
+FaceForensics++_C23
 
 # OS specific files
 .DS_Store

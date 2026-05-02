@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900">
+  <defs>
+    <style>
+      :root{
+        --ink:#111827; --muted:#4b5563; --line:#111827;
+        --soft:#f8fafc; --vit:#eef6ff; --temp:#effdf4;
+        --accent1:#2563eb; --accent2:#16a34a;
+      }
+      .t0 { font:700 22px "Times New Roman", Times, serif; fill:var(--ink); }
+      .t1 { font:700 16px "Times New Roman", Times, serif; fill:var(--ink); }
+      .t2 { font:600 13px "Times New Roman", Times, serif; fill:var(--ink); }
+      .t3 { font:500 12px "Times New Roman", Times, serif; fill:var(--muted); }
+      .mono { font:600 12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; fill:var(--ink); }
+      .monoS { font:600 11px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; fill:var(--muted); }
+
+      .panel { fill:#fff; stroke:var(--line); stroke-width:1.8; rx:18; ry:18; }
+      .panelVit { fill:var(--vit); stroke:var(--accent1); stroke-width:2.2; rx:20; ry:20; }
+      .panelTemp { fill:var(--temp); stroke:var(--accent2); stroke-width:2.2; rx:20; ry:20; }
+      .blk { fill:#fff; stroke:var(--line); stroke-width:1.25; rx:14; ry:14; }
+      .blkSoft { fill:var(--soft); stroke:var(--line); stroke-width:1.05; rx:14; ry:14; }
+      .mini { fill:#fff; stroke:var(--line); stroke-width:1.0; rx:12; ry:12; }
+
+      .arrow { stroke:var(--line); stroke-width:2.0; fill:none; }
+      .arrowThin { stroke:var(--line); stroke-width:1.5; fill:none; }
+      .dash { stroke-dasharray:6 6; }
+
+      .tagBlue { fill:var(--accent1); }
+      .tagGreen { fill:var(--accent2); }
+      .tagTxt { font:700 11px Inter, Arial, sans-serif; fill:#fff; }
+      .note { font:500 11px "Times New Roman", Times, serif; fill:var(--muted); }
+    </style>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#111827"/>
+    </marker>
+
+    <!-- Clip paths to guarantee inner boxes never cross panel boundaries -->
+    <clipPath id="clipVit">
+      <rect x="580" y="120" width="520" height="610" rx="20" ry="20"/>
+    </clipPath>
+    <clipPath id="clipTemp">
+      <rect x="1390" y="120" width="360" height="610" rx="20" ry="20"/>
+    </clipPath>
+  </defs>
+
+  <!-- Title -->
+  <text x="50" y="52" class="t0">Architecture: ViT-S/16 Frame Encoder + Temporal Transformer (Deepfake Detection)</text>
+  <text x="50" y="76" class="t3">Shapes for batch size B and clip length T. CLS tokens and padding mask are used.</text>
+
+  <!-- INPUT -->
+  <rect x="50" y="150" width="260" height="120" class="panel"/>
+  <text x="70" y="185" class="t1">Input Clip</text>
+  <text x="70" y="211" class="t3">Face crops (RGB)</text>
+  <text x="70" y="239" class="mono">X ∈ R^{B×T×3×224×224}</text>
+
+  <!-- RESHAPE -->
+  <rect x="340" y="165" width="210" height="90" class="blkSoft"/>
+  <text x="360" y="197" class="t2">Reshape</text>
+  <text x="360" y="225" class="mono">B×T → (B·T)</text>
+  <path d="M310,210 L340,210" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- VIT PANEL -->
+  <rect x="580" y="120" width="520" height="610" class="panelVit"/>
+  <rect x="600" y="136" width="110" height="22" rx="10" ry="10" class="tagBlue"/>
+  <text x="612" y="152" class="tagTxt">ViT-S/16</text>
+
+  <!-- Everything inside ViT is clipped -->
+  <g clip-path="url(#clipVit)">
+    <text x="600" y="185" class="t1">Vision Transformer (per-frame)</text>
+    <text x="600" y="208" class="t3">timm vit_small_patch16_224 • D=384</text>
+
+    <rect x="620" y="245" width="440" height="84" class="blk"/>
+    <text x="640" y="275" class="t2">Patch Embedding (16×16) + Linear Projection</text>
+    <text x="640" y="302" class="monoS">[B·T, 3, 224, 224] → [B·T, Np, D], Np=196</text>
+
+    <rect x="620" y="344" width="440" height="66" class="blk"/>
+    <text x="640" y="372" class="t2">Add Spatial Positional Embeddings + CLS</text>
+    <text x="640" y="396" class="monoS">→ [B·T, 1+Np, D]</text>
+
+    <rect x="620" y="425" width="440" height="235" class="blk"/>
+    <text x="640" y="455" class="t2">L × Transformer Encoder Blocks</text>
+    <text x="640" y="478" class="t3">Pre-LN + residual connections</text>
+
+    <rect x="650" y="500" width="380" height="62" class="mini"/>
+    <text x="670" y="526" class="t2">LN → Multi-Head Self-Attention → + residual</text>
+
+    <rect x="650" y="570" width="380" height="62" class="mini"/>
+    <text x="670" y="596" class="t2">LN → MLP / FFN (FC–GELU–FC) → + residual</text>
+
+    <rect x="620" y="675" width="440" height="45" class="blk"/>
+    <text x="640" y="703" class="t2">Take CLS token as frame embedding</text>
+    <text x="640" y="718" class="monoS">F ∈ R^{(B·T)×384}</text>
+
+    <path d="M840,329 L840,344" class="arrowThin" marker-end="url(#ah)"/>
+    <path d="M840,410 L840,425" class="arrowThin" marker-end="url(#ah)"/>
+    <path d="M840,660 L840,675" class="arrowThin" marker-end="url(#ah)"/>
+  </g>
+
+  <path d="M550,210 L580,210" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- FRAME EMBEDDINGS -->
+  <rect x="1130" y="165" width="230" height="90" class="blkSoft"/>
+  <text x="1150" y="197" class="t2">Frame Embeddings</text>
+  <text x="1150" y="225" class="mono">F ∈ R^{(B·T)×384}</text>
+  <path d="M1100,210 L1130,210" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- RESHAPE TO SEQUENCE -->
+  <rect x="1130" y="275" width="230" height="90" class="blkSoft"/>
+  <text x="1150" y="307" class="t2">Reshape</text>
+  <text x="1150" y="335" class="mono">S ∈ R^{B×T×384}</text>
+  <path d="M1245,255 L1245,275" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- TEMPORAL PANEL -->
+  <rect x="1390" y="120" width="360" height="610" class="panelTemp"/>
+  <rect x="1410" y="136" width="170" height="22" rx="10" ry="10" class="tagGreen"/>
+  <text x="1422" y="152" class="tagTxt">Temporal Transformer</text>
+
+  <!-- Everything inside Temporal is clipped -->
+  <g clip-path="url(#clipTemp)">
+    <text x="1410" y="185" class="t1">Temporal Transformer (sequence)</text>
+    <text x="1410" y="208" class="t3">Encoder-only • D=384 • heads=6</text>
+
+    <rect x="1430" y="245" width="320" height="62" class="blk"/>
+    <text x="1450" y="273" class="t2">Prepend CLS_time token</text>
+    <text x="1450" y="297" class="monoS">[B,T,D] → [B,1+T,D]</text>
+
+    <rect x="1430" y="317" width="320" height="62" class="blk"/>
+    <text x="1450" y="345" class="t2">Add Temporal Positional Embeddings</text>
+    <text x="1450" y="369" class="monoS">+ P_time ∈ R^{1×(1+T)×D}</text>
+
+    <rect x="1430" y="389" width="320" height="62" class="blk"/>
+    <text x="1450" y="417" class="t2">Apply src_key_padding_mask</text>
+    <text x="1450" y="441" class="monoS">mask ∈ {0,1}^{B×(1+T)}</text>
+
+    <rect x="1430" y="465" width="320" height="175" class="blk"/>
+    <text x="1450" y="495" class="t2">N × Transformer Encoder Blocks</text>
+    <text x="1450" y="518" class="t3">Pre-LN + residual connections</text>
+
+    <rect x="1450" y="535" width="280" height="48" class="mini"/>
+    <text x="1470" y="563" class="t2">LN → MHA (temporal) → + residual</text>
+
+    <rect x="1450" y="591" width="280" height="48" class="mini"/>
+    <text x="1470" y="619" class="t2">LN → MLP / FFN → + residual</text>
+
+    <rect x="1430" y="655" width="320" height="55" class="blk"/>
+    <text x="1450" y="682" class="t2">Take CLS_time → Dropout → Linear</text>
+    <text x="1450" y="704" class="monoS">logits ∈ R^{B×2}</text>
+
+    <path d="M1590,307 L1590,317" class="arrowThin" marker-end="url(#ah)"/>
+    <path d="M1590,379 L1590,389" class="arrowThin" marker-end="url(#ah)"/>
+    <path d="M1590,451 L1590,465" class="arrowThin" marker-end="url(#ah)"/>
+    <path d="M1590,640 L1590,655" class="arrowThin" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Connect sequence to temporal -->
+  <path d="M1360,320 L1390,320" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- OUTPUT -->
+  <rect x="1220" y="780" width="420" height="70" class="panel"/>
+  <text x="1240" y="812" class="t1">Output</text>
+  <text x="1240" y="836" class="mono">FAKE / REAL  (2-class logits)</text>
+
+  <path d="M1590,710 L1590,760 L1430,760 L1430,780" class="arrow" marker-end="url(#ah)"/>
+
+  <!-- Footer -->
+  <path d="M50,888 L1750,888" class="arrowThin dash" style="stroke:#9ca3af;" />
+  <text x="50" y="880" class="note">Flow: X → reshape → ViT (spatial) → frame embeddings F → reshape → Temporal Transformer (time) → classifier.</text>
+</svg>
