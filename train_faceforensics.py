@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-Train ViTS_TemporalTransformer on FaceForensics++ using the same recipe as train.ipynb:
+Train ViTS_TemporalTransformer on FaceForensics++ / Celeb-DF cached face clips:
 
-  • Metadata CSV (File Path, Label) under the FF++ root
-  • OpenCV RGB frames, uniform temporal sampling, resize 224, ImageNet normalize
+  • Cached face-frame manifests from preprocess_ffpp_faces.py / preprocess_celebdf_faces.py
+  • Optional raw FF++ fallback for legacy experiments
   • Labels: 0 = FAKE, 1 = REAL (same as notebook / test_faceforensics.py)
   • AdamW with separate LRs for ViT backbone vs temporal+head; cosine LR after warmup
   • Checkpoints under checkpoints/<MODEL_NAME>/ (override with --model-name)
-  • Stratified train / validation / test split (--val-fraction, --test-fraction);
-    after training, reports metrics on the held-out test set using best_model.pt.
+  • After training, reports metrics on the held-out test set using best_model.pt.
 
 Example:
   python train_faceforensics.py --ffpp-root ./FaceForensics++_C23 --epochs 15
-  python train_faceforensics.py --preprocessed-root ./FaceForensics++_C23/preprocessed/faces_v1_224 --epochs 15
+  python train_faceforensics.py --epochs 15
+  python train_faceforensics.py --raw-videos --epochs 15
+  python train_faceforensics.py --dataset-mode hybrid --model-name Hybrid_FFpp_CelebDF --no-resume --epochs 15
 """
 
 from __future__ import annotations
@@ -28,6 +29,7 @@ import time
 from datetime import datetime
 from math import cos, pi
 from pathlib import Path
+from dataclasses import dataclass
 from typing import List, Optional, Sequence, Tuple
 
 import cv2
@@ -37,7 +39,7 @@ import torch.nn as nn
 import torchvision.transforms as transforms
 from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.model_selection import train_test_split
-from torch.utils.data import DataLoader, Dataset
+from torch.utils.data import DataLoader, Dataset, WeightedRandomSampler
 from tqdm import tqdm
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -55,6 +57,14 @@ import test_faceforensics as ffpp  # noqa: E402
 # ---------------------------------------------------------------------------
 # Dataset
 # ---------------------------------------------------------------------------
+
+
+@dataclass(frozen=True)
+class CachedSample:
+    cache_dir: str
+    label: int
+    category: str
+    dataset: str
 
 
 class FaceForensicsClipDataset(Dataset):
@@ -157,14 +167,37 @@ def load_cached_split_manifest(
     max_items: Optional[int],
     seed: int,
 ) -> Tuple[List[str], List[int]]:
+    rows = load_cached_split_manifest_records(
+        preprocessed_root=preprocessed_root,
+        split=split,
+        categories_filter=categories_filter,
+        max_items=max_items,
+        seed=seed,
+        dataset_name="cache",
+    )
+    return [r.cache_dir for r in rows], [r.label for r in rows]
+
+
+def load_cached_split_manifest_records(
+    preprocessed_root: str,
+    split: str,
+    categories_filter: Optional[set],
+    max_items: Optional[int],
+    seed: int,
+    dataset_name: str,
+) -> List[CachedSample]:
     manifest_path = os.path.join(preprocessed_root, f"{split}_manifest.csv")
     if not os.path.isfile(manifest_path):
+        script_name = {
+            "ffpp": "preprocess_ffpp_faces.py",
+            "celebdf": "preprocess_celebdf_faces.py",
+        }.get(dataset_name, "the matching preprocessing script")
         raise FileNotFoundError(
             f"Cached split manifest not found: {manifest_path}\n"
-            "Run preprocess_ffpp_faces.py first, or omit --preprocessed-root."
+            f"Run {script_name} first, or pass the correct cache root."
         )
 
-    rows: List[Tuple[str, int, str]] = []
+    rows: List[CachedSample] = []
     with open(manifest_path, "r", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
@@ -181,7 +214,14 @@ def load_cached_split_manifest(
                 cache_dir = os.path.join(preprocessed_root, cache_dir)
             if not os.path.isdir(cache_dir):
                 raise FileNotFoundError(f"Cached frame directory missing: {cache_dir}")
-            rows.append((os.path.normpath(cache_dir), 0 if label == "FAKE" else 1, category))
+            rows.append(
+                CachedSample(
+                    cache_dir=os.path.normpath(cache_dir),
+                    label=0 if label == "FAKE" else 1,
+                    category=category,
+                    dataset=dataset_name,
+                )
+            )
 
     if max_items is not None and max_items > 0 and len(rows) > max_items:
         rng = random.Random(seed)
@@ -191,7 +231,40 @@ def load_cached_split_manifest(
     if not rows:
         raise RuntimeError(f"No usable cached samples found for split '{split}' in {preprocessed_root}")
 
-    return [r[0] for r in rows], [r[1] for r in rows]
+    return rows
+
+
+def cached_samples_to_dataset(
+    samples: Sequence[CachedSample],
+    clip_len: int,
+    transform: transforms.Compose,
+    random_temporal_sampling: bool,
+    seed: int,
+) -> FaceForensicsCachedClipDataset:
+    return FaceForensicsCachedClipDataset(
+        [s.cache_dir for s in samples],
+        [s.label for s in samples],
+        clip_len,
+        transform,
+        random_temporal_sampling=random_temporal_sampling,
+        seed=seed,
+    )
+
+
+def make_dataset_class_balanced_sampler(samples: Sequence[CachedSample]) -> WeightedRandomSampler:
+    group_counts = Counter((sample.dataset, sample.label) for sample in samples)
+    weights = [1.0 / group_counts[(sample.dataset, sample.label)] for sample in samples]
+    return WeightedRandomSampler(weights=weights, num_samples=len(weights), replacement=True)
+
+
+def source_label_summary(samples: Sequence[CachedSample]) -> str:
+    counts = Counter((sample.dataset, sample.label) for sample in samples)
+    parts = []
+    for dataset_name in sorted({sample.dataset for sample in samples}):
+        fake = counts[(dataset_name, 0)]
+        real = counts[(dataset_name, 1)]
+        parts.append(f"{dataset_name}: FAKE={fake}, REAL={real}")
+    return "; ".join(parts)
 
 
 # ---------------------------------------------------------------------------
@@ -490,15 +563,33 @@ def save_split_manifest(
 def main() -> None:
     default_root = os.path.join(PROJECT_ROOT, "FaceForensics++_C23")
     default_meta = os.path.join(default_root, "csv", "FF++_Metadata.csv")
+    default_celebdf_root = os.path.abspath(os.path.join(PROJECT_ROOT, "..", "celebdf"))
+    default_preprocessed = os.environ.get("FFD_FFPP_PREPROCESSED_ROOT", "")
+    default_celebdf_preprocessed = os.environ.get("FFD_CELEBDF_PREPROCESSED_ROOT", "")
+    default_model_name = os.environ.get("FFD_FFPP_MODEL_NAME", "")
 
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument(
+        "--dataset-mode",
+        choices=["ffpp", "celebdf", "hybrid"],
+        default="ffpp",
+        help="Dataset source to train/evaluate on. Default: ffpp.",
+    )
     p.add_argument("--ffpp-root", type=str, default=os.environ.get("FFD_FFPP_ROOT", default_root))
     p.add_argument("--metadata", type=str, default=default_meta)
     p.add_argument(
         "--preprocessed-root",
         type=str,
-        default=os.environ.get("FFD_FFPP_PREPROCESSED_ROOT", ""),
-        help="Use cached face-frame manifests from preprocess_ffpp_faces.py instead of reading mp4s.",
+        default=default_preprocessed,
+        help="Use cached face-frame manifests from preprocess_ffpp_faces.py. Defaults to <ffpp-root>/preprocessed/faces_v1_224 when present.",
+    )
+    p.add_argument("--raw-videos", action="store_true", help="Ignore the preprocessed cache and decode original mp4s.")
+    p.add_argument("--celebdf-root", type=str, default=os.environ.get("FFD_CELEBDF_ROOT", default_celebdf_root))
+    p.add_argument(
+        "--celebdf-preprocessed-root",
+        type=str,
+        default=default_celebdf_preprocessed,
+        help="Celeb-DF cached face-frame root. Defaults to <celebdf-root>/preprocessed/faces_v1_224.",
     )
     p.add_argument("--categories", type=str, default="", help="Comma-separated folders, e.g. original,Deepfakes. Empty=all.")
     p.add_argument(
@@ -520,8 +611,8 @@ def main() -> None:
     p.add_argument(
         "--model-name",
         type=str,
-        default=os.environ.get("FFD_FFPP_MODEL_NAME", "FFpp_C23"),
-        help="Subfolder under checkpoints/ for saves (default: FFpp_C23).",
+        default=default_model_name,
+        help="Subfolder under checkpoints/ for saves. Defaults to FFpp_C23, or Hybrid_FFpp_CelebDF in hybrid mode.",
     )
     p.add_argument("--epochs", type=int, default=None, help="Override Config.NUM_EPOCHS when set.")
     p.add_argument("--batch-size", type=int, default=0, help="0 = use Config.BATCH_SIZE.")
@@ -538,6 +629,11 @@ def main() -> None:
         action="store_true",
         help="Do not evaluate on the held-out test set after training.",
     )
+    p.add_argument(
+        "--data-check-only",
+        action="store_true",
+        help="Build datasets/loaders, print one sample and batch shape, then exit before model creation.",
+    )
     p.add_argument("--device", type=str, default="", help="cuda | cpu | mps | empty = Config.DEVICE")
     args = p.parse_args()
 
@@ -545,41 +641,85 @@ def main() -> None:
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
 
-    checkpoint_dir = apply_config_model_name(args.model_name)
+    model_name = args.model_name.strip()
+    if not model_name:
+        if args.dataset_mode == "hybrid":
+            model_name = "Hybrid_FFpp_CelebDF"
+        elif args.dataset_mode == "celebdf":
+            model_name = "CelebDF"
+        else:
+            model_name = "FFpp_C23"
+
+    checkpoint_dir = apply_config_model_name(model_name)
     device = torch.device(args.device) if args.device else Config.DEVICE
 
     meta_path = os.path.abspath(args.metadata)
-    if not os.path.isfile(meta_path):
+    if args.dataset_mode in {"ffpp", "hybrid"} and not os.path.isfile(meta_path):
         sys.exit(f"Metadata CSV not found: {meta_path}")
 
     ffpp_root = os.path.abspath(args.ffpp_root)
+    celebdf_root = os.path.abspath(args.celebdf_root)
+    if args.dataset_mode in {"celebdf", "hybrid"} and not os.path.isdir(celebdf_root):
+        sys.exit(f"Celeb-DF root not found: {celebdf_root}")
+    if args.raw_videos and args.dataset_mode != "ffpp":
+        sys.exit("--raw-videos is only supported with --dataset-mode ffpp")
+
     cats_filter: Optional[set] = None
     if args.categories.strip():
         cats_filter = {c.strip() for c in args.categories.split(",") if c.strip()}
 
     tfm = ffpp.build_eval_transform(Config.IM_SIZE, Config.MEAN, Config.STD)
-    preprocessed_root = os.path.abspath(args.preprocessed_root) if args.preprocessed_root.strip() else ""
+    ffpp_preprocessed_root = ""
+    if not args.raw_videos:
+        preprocessed_candidate = args.preprocessed_root.strip()
+        if not preprocessed_candidate:
+            default_cache = os.path.join(ffpp_root, "preprocessed", "faces_v1_224")
+            if os.path.isdir(default_cache):
+                preprocessed_candidate = default_cache
+        if preprocessed_candidate:
+            ffpp_preprocessed_root = os.path.abspath(preprocessed_candidate)
 
-    if preprocessed_root:
-        if not os.path.isdir(preprocessed_root):
-            sys.exit(f"Preprocessed root not found: {preprocessed_root}")
-        max_items = args.max_videos if args.max_videos > 0 else None
-        train_p, train_y = load_cached_split_manifest(preprocessed_root, "train", cats_filter, max_items, args.seed)
-        val_p, val_y = load_cached_split_manifest(preprocessed_root, "val", cats_filter, max_items, args.seed)
-        test_p, test_y = load_cached_split_manifest(preprocessed_root, "test", cats_filter, max_items, args.seed)
+    celebdf_preprocessed_root = ""
+    if args.dataset_mode in {"celebdf", "hybrid"}:
+        celebdf_candidate = args.celebdf_preprocessed_root.strip()
+        if not celebdf_candidate:
+            celebdf_candidate = os.path.join(celebdf_root, "preprocessed", "faces_v1_224")
+        celebdf_preprocessed_root = os.path.abspath(celebdf_candidate)
+        if not os.path.isdir(celebdf_preprocessed_root):
+            sys.exit(
+                f"Celeb-DF preprocessed root not found: {celebdf_preprocessed_root}\n"
+                "Run preprocess_celebdf_faces.py first."
+            )
 
-        train_ds = FaceForensicsCachedClipDataset(
-            train_p,
-            train_y,
-            Config.CLIP_LEN,
-            tfm,
-            random_temporal_sampling=True,
-            seed=args.seed,
+    max_items = args.max_videos if args.max_videos > 0 else None
+    train_samples: List[CachedSample] = []
+    val_samples: List[CachedSample] = []
+    test_samples: List[CachedSample] = []
+    data_source = ""
+    split_manifest_path = ""
+    train_sampler = None
+
+    if args.dataset_mode == "ffpp" and ffpp_preprocessed_root:
+        if not os.path.isdir(ffpp_preprocessed_root):
+            sys.exit(f"FF++ preprocessed root not found: {ffpp_preprocessed_root}")
+        train_samples = load_cached_split_manifest_records(
+            ffpp_preprocessed_root, "train", cats_filter, max_items, args.seed, "ffpp"
         )
-        val_ds = FaceForensicsCachedClipDataset(val_p, val_y, Config.CLIP_LEN, tfm)
-        test_ds = FaceForensicsCachedClipDataset(test_p, test_y, Config.CLIP_LEN, tfm)
-        split_manifest_path = os.path.join(preprocessed_root, "manifest.csv")
-    else:
+        val_samples = load_cached_split_manifest_records(
+            ffpp_preprocessed_root, "val", cats_filter, max_items, args.seed, "ffpp"
+        )
+        test_samples = load_cached_split_manifest_records(
+            ffpp_preprocessed_root, "test", cats_filter, max_items, args.seed, "ffpp"
+        )
+        train_y = [s.label for s in train_samples]
+        val_y = [s.label for s in val_samples]
+        test_y = [s.label for s in test_samples]
+        train_ds = cached_samples_to_dataset(train_samples, Config.CLIP_LEN, tfm, True, args.seed)
+        val_ds = cached_samples_to_dataset(val_samples, Config.CLIP_LEN, tfm, False, args.seed)
+        test_ds = cached_samples_to_dataset(test_samples, Config.CLIP_LEN, tfm, False, args.seed)
+        data_source = "ffpp preprocessed face cache"
+        split_manifest_path = os.path.join(ffpp_preprocessed_root, "manifest.csv")
+    elif args.dataset_mode == "ffpp":
         max_v = args.max_videos if args.max_videos > 0 else None
         paths, labels = collect_samples(
             ffpp_root, meta_path, cats_filter, args.skip_missing, max_v, args.seed,
@@ -600,12 +740,58 @@ def main() -> None:
         split_manifest_path = save_split_manifest(
             checkpoint_dir, ffpp_root, train_p, val_p, test_p, args.seed, args.val_fraction, args.test_fraction
         )
+        data_source = "ffpp raw videos"
+    else:
+        if args.dataset_mode in {"hybrid"}:
+            if not ffpp_preprocessed_root or not os.path.isdir(ffpp_preprocessed_root):
+                sys.exit(
+                    "FF++ preprocessed root is required for --dataset-mode hybrid.\n"
+                    "Run preprocess_ffpp_faces.py first or pass --preprocessed-root."
+                )
+            train_samples.extend(
+                load_cached_split_manifest_records(ffpp_preprocessed_root, "train", cats_filter, max_items, args.seed, "ffpp")
+            )
+            val_samples.extend(
+                load_cached_split_manifest_records(ffpp_preprocessed_root, "val", cats_filter, max_items, args.seed, "ffpp")
+            )
+            test_samples.extend(
+                load_cached_split_manifest_records(ffpp_preprocessed_root, "test", cats_filter, max_items, args.seed, "ffpp")
+            )
+
+        if args.dataset_mode in {"celebdf", "hybrid"}:
+            train_samples.extend(
+                load_cached_split_manifest_records(celebdf_preprocessed_root, "train", None, max_items, args.seed, "celebdf")
+            )
+            val_samples.extend(
+                load_cached_split_manifest_records(celebdf_preprocessed_root, "val", None, max_items, args.seed, "celebdf")
+            )
+            test_samples.extend(
+                load_cached_split_manifest_records(celebdf_preprocessed_root, "test", None, max_items, args.seed, "celebdf")
+            )
+
+        train_y = [s.label for s in train_samples]
+        val_y = [s.label for s in val_samples]
+        test_y = [s.label for s in test_samples]
+        train_ds = cached_samples_to_dataset(train_samples, Config.CLIP_LEN, tfm, True, args.seed)
+        val_ds = cached_samples_to_dataset(val_samples, Config.CLIP_LEN, tfm, False, args.seed)
+        test_ds = cached_samples_to_dataset(test_samples, Config.CLIP_LEN, tfm, False, args.seed)
+        if args.dataset_mode == "hybrid":
+            train_sampler = make_dataset_class_balanced_sampler(train_samples)
+            data_source = "hybrid ffpp+celebdf preprocessed face caches"
+            split_manifest_path = (
+                f"ffpp={os.path.join(ffpp_preprocessed_root, 'manifest.csv')} | "
+                f"celebdf={os.path.join(celebdf_preprocessed_root, 'manifest.csv')}"
+            )
+        else:
+            data_source = "celebdf preprocessed face cache"
+            split_manifest_path = os.path.join(celebdf_preprocessed_root, "manifest.csv")
 
     batch_size = args.batch_size if args.batch_size > 0 else Config.BATCH_SIZE
     train_loader = DataLoader(
         train_ds,
         batch_size=batch_size,
-        shuffle=True,
+        shuffle=train_sampler is None,
+        sampler=train_sampler,
         num_workers=Config.NUM_WORKERS,
         pin_memory=Config.PIN_MEMORY,
     )
@@ -627,11 +813,18 @@ def main() -> None:
     num_epochs = args.epochs if args.epochs is not None else Config.NUM_EPOCHS
 
     Config.print_config()
-    print(f"\n  FF++ root        : {ffpp_root}")
-    print(f"  Metadata         : {meta_path}")
-    if preprocessed_root:
-        print(f"  Preprocessed    : {preprocessed_root}")
+    print(f"\n  Dataset mode     : {args.dataset_mode}")
+    print(f"  Data source      : {data_source}")
+    print(f"  FF++ root        : {ffpp_root}")
+    if args.dataset_mode in {"ffpp", "hybrid"}:
+        print(f"  Metadata         : {meta_path}")
+    if ffpp_preprocessed_root and args.dataset_mode in {"ffpp", "hybrid"}:
+        print(f"  FF++ cache       : {ffpp_preprocessed_root}")
+    if args.dataset_mode in {"celebdf", "hybrid"}:
+        print(f"  Celeb-DF root    : {celebdf_root}")
+        print(f"  Celeb-DF cache   : {celebdf_preprocessed_root}")
     print(f"  Checkpoint dir   : {checkpoint_dir}")
+
     def fake_real_counts(ys: Sequence[int]) -> Tuple[int, int]:
         c = Counter(ys)
         return c[0], c[1]
@@ -641,9 +834,27 @@ def main() -> None:
     xfk, xrk = fake_real_counts(test_y)
     print(f"  Train / Val / Test : {len(train_ds)} / {len(val_ds)} / {len(test_ds)} clips")
     print(f"    (FAKE/REAL) train {tfk}/{trk}  val {vfk}/{vrk}  test {xfk}/{xrk}")
+    if train_samples:
+        print(f"  Train sources    : {source_label_summary(train_samples)}")
+        print(f"  Val sources      : {source_label_summary(val_samples)}")
+        print(f"  Test sources     : {source_label_summary(test_samples)}")
+    if train_sampler is not None:
+        print("  Train sampler    : dataset+class balanced WeightedRandomSampler")
     print(f"  Split manifest     : {split_manifest_path}")
     print(f"  Batch size       : {batch_size}")
     print(f"  Epochs           : {num_epochs}")
+
+    if args.data_check_only:
+        sample_x, sample_y = train_ds[0]
+        batch_x, batch_y = next(iter(train_loader))
+        print("\n  Data check")
+        print("  ----------")
+        print(f"  Sample tensor     : {tuple(sample_x.shape)}  label={sample_y}")
+        print(f"  Batch tensor      : {tuple(batch_x.shape)}")
+        print(f"  Batch labels      : {batch_y.tolist()}")
+        if train_samples:
+            print(f"  Batch sampler     : {'weighted' if train_sampler is not None else 'shuffle'}")
+        return
 
     model = ViTS_TemporalTransformer(
         num_classes=Config.NUM_CLASSES,

@@ -32,7 +32,7 @@ class Config:
     # ──────────────────────────── Model/Experiment Name ────────────────
     # Change this for each new model configuration to prevent overwriting
     # Previous model data will be preserved in its own directory
-    MODEL_NAME = "30Frames"  # subfolder under checkpoints/ for save/load; must match where checkpoint.pt lives
+    MODEL_NAME = "30FramesFF_CDF"  # subfolder under checkpoints/ for save/load; must match where checkpoint.pt lives
     
     CHECKPOINT_DIR    = os.path.join(PROJECT_ROOT, "checkpoints", MODEL_NAME)
 
